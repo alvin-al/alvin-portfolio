@@ -1,6 +1,6 @@
 function HeroBanner() {
     return(
-        <div id="heroBanner" className="mb-48">
+        <div id="heroBanner" className="">
             <div id="heroBanner-caption">
                 <p className="text-right pl-24 text-white text-base">Hi, I am Alvin a web developer based in Bogor, Indonesia. Currently pursuing a degree in information systems at the Open University. I love to learn any field like design, tech, and web development. Feel free to explore my works and my thought</p>
             </div>

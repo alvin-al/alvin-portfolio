@@ -1,15 +1,11 @@
 import React from 'react';
-import dailydriven from '../assets/images/dailydriven.webp';
 
 
-function WorkBlock (){
+function WorkBlock ({src, title}){
     return(
-        <div>
-            <img src={dailydriven} alt="dailydriven" className=''/>
-            <h2 className="font-syne font-extrabold text-xl text-left text-white my-2">Dailydriven Garage</h2>
-
-
-
+        <div className='mb-8'>
+            <img src={src} alt="src" />
+            <h2 className="font-syne font-extrabold text-2xl text-left text-white my-2">{title}</h2>
         </div>
     );
 };

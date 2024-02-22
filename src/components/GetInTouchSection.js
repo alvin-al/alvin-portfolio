@@ -1,4 +1,5 @@
 import React from "react";
+import EmailForm from "./EmailForm";
 
 const GetInTouchSection = () =>{
     return(
@@ -7,8 +8,7 @@ const GetInTouchSection = () =>{
             <p className="text-left text-white text-base pt-4 mb-12">If you like my work or have any questions, feel free to contact me directly. I would love to hear from you and discuss your web development needs. You can reach me by email.</p>
 
             <div>
-                <form id="contact-form" action=""></form>
-
+                <EmailForm />
 
 
 

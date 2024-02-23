@@ -9,9 +9,9 @@ function HeroBanner() {
             </div>
             <div id="navbar" className="pr-48">
                 <ul className="flex text-left gap-2 flex-col text-white">
-                    <li className="border-b-2 border-gray-100 pb-1 cursor-pointer">Work</li>
-                    <li className="border-b-2 border-gray-100 pb-1 cursor-pointer">Playground</li>
-                    <li className="border-b-2 border-gray-100 pb-1 cursor-pointer">Contact</li>
+                    <li className="border-b-2 border-gray-100 pb-1 cursor-pointer"><a href="#work">Work</a></li>
+                    <li className="border-b-2 border-gray-100 pb-1 cursor-pointer"><a href="#playground">Playground</a></li>
+                    <li className="border-b-2 border-gray-100 pb-1 cursor-pointer"><a href="#getintouch">Contact</a></li>
                 </ul>
             </div>
         </div>

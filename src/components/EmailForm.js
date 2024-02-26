@@ -9,7 +9,7 @@ function EmailForm() {
   }
   return (
     <div >
-        <form onSubmit={handleSubmit} className='flex flex-col pr-24'>
+        <form onSubmit={handleSubmit} className='flex flex-col pr-24 md:pr-96 md:mb-24 lg:pr-[55%]'>
             {/* <label htmlFor="email" className='text-white text-left'>
                 Email Address
             </label> */}

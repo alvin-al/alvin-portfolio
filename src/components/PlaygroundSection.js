@@ -1,20 +1,26 @@
 import React from "react";
+import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 import CovidInstaPost from '../assets/images/Covid-insta-post.jpg';
 import DailydrivenBrosur from '../assets/images/dailydriven-brosur.jpg';
 import ErenStreetwear from '../assets/images/Eren-Streetwear.jpg';
 import Vlab from '../assets/images/VLAB.webp';
 import LaserPresisi from '../assets/images/Laser-presisi-post.webp';
+import FlightMenu from '../assets/images/Flight-iron-menu.webp';
 
+const images = [
+    "CovidInstaPost",
+    "DailydrivenBrosur"
+]
 
 
 function PlaygroundSection (){
     return(
         <div id="playground">
-            <h2 className="font-syne font-extrabold text-4xl text-left text-white border-b-2 pb-4">Playground</h2>
-            <p className="text-left text-white text-base pt-4 mb-12">My journey as a web developer started from graphic design. I have a passion for creating beautiful and functional websites that communicate effectively with the target audience. I have learned UI design and web development skills to deliver high-quality websites.</p>
+            <h2 className="font-syne font-extrabold text-4xl text-left text-white border-b-2 pb-4 xl:text-6xl">Playground</h2>
+            <p className="text-left text-white text-base pt-4 mb-12 xl:pr-[50%] xl:text-lg">My journey as a web developer started from graphic design. I have a passion for creating beautiful and functional websites that communicate effectively with the target audience. I have learned UI design and web development skills to deliver high-quality websites.</p>
             <div id="all-playground" className="grid box-border gap-4 lg:grid-cols-4">
-                <img src={Vlab} alt="" className="rounded-sm lg:col-span-3"/>
-                <div className="grid grid-cols-1 gap-4">
+                {/* <img src={Vlab} alt="" className="rounded-sm lg:col-span-3"/>
+                <div className="grid grid-cols-1 gap-4 ">
                     <div className="grid gap-4">
                         <img src={CovidInstaPost} alt="" className="rounded-sm "/>
                         <img src={DailydrivenBrosur} alt="" className="rounded-sm"/>
@@ -22,6 +28,27 @@ function PlaygroundSection (){
                     <div className="grid h-fit gap-4 col-span-1 ">
                         <img src={ErenStreetwear} alt="" className="rounded-sm "/>
                         <img src={LaserPresisi} alt="" className="rounded-sm "/>        
+                    </div>
+                </div> */}
+
+                <div className="flex flex-col ">
+                    <div className="w-full max-w-5xl p-5 pb-10 mx-auto mb-10 columns-2 space-y-6">
+                        <div className="">
+                            <img src={CovidInstaPost} alt="" className="rounded-sm "/>
+                        </div>
+                        <div className="">
+                            <img src={ErenStreetwear} alt="" className="rounded-sm  " />
+                        </div>
+                        <div className="">
+                            <img src={LaserPresisi} alt="" className="rounded-sm object-contain"/>
+                        </div>
+                        <div className="">
+                            <img src={DailydrivenBrosur} alt="" className="rounded-sm object-contain"/> 
+                        </div>
+                    </div>
+                    <div className="flex gap-4">
+                        <img src={Vlab} alt="" className="rounded-sm object-cover"/>
+                        <img src={FlightMenu} alt="" className="rounded-sm object-cover"/>
                     </div>
                 </div>
             </div>

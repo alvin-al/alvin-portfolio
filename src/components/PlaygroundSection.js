@@ -1,8 +1,8 @@
 import React from "react";
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
-import CovidInstaPost from '../assets/images/Covid-insta-post.jpg';
-import DailydrivenBrosur from '../assets/images/dailydriven-brosur.jpg';
-import ErenStreetwear from '../assets/images/Eren-Streetwear.jpg';
+import CovidInstaPost from '../assets/images/Covid-insta-post.webp';
+import DailydrivenBrosur from '../assets/images/dailydriven-brosur.webp';
+import ErenStreetwear from '../assets/images/Eren-Streetwear.webp';
 import Vlab from '../assets/images/VLAB.webp';
 import LaserPresisi from '../assets/images/Laser-presisi-post.webp';
 import FlightMenu from '../assets/images/Flight-iron-menu.webp';

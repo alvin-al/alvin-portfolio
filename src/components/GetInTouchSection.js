@@ -4,8 +4,8 @@ import EmailForm from "./EmailForm";
 const GetInTouchSection = () =>{
     return(
         <div id="getintouch">
-            <h2 className="font-syne font-extrabold text-4xl text-left text-white border-b-2 pb-4 xl:text-6xl">Get In Touch</h2>
-            <p className="text-left text-white text-base pt-4 mb-32 md:mb-24 lg:pr-[50%] xl:text-lg">If you like my work or have any questions, feel free to contact me directly. I would love to hear from you and discuss your web development needs. You can reach me by email.</p>
+            <h2 className="font-syne font-extrabold text-4xl text-left text-white xl:text-6xl">Get In Touch</h2>
+            <p className="text-left text-white text-base py-8 xl:pl-[60%] lg:text-base">If you like my work or have any questions, feel free to contact me directly. I would love to hear from you and discuss your web development needs. You can reach me by email.</p>
             <div>
                 <EmailForm />
             </div>

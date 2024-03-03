@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6c9ec6a8.css",
+    "main.js": "/static/js/main.b5b66a00.js",
+    "static/js/453.23d5dc6d.chunk.js": "/static/js/453.23d5dc6d.chunk.js",
+    "static/media/Eren-Streetwear.jpg": "/static/media/Eren-Streetwear.839c4f6b7d781c397124.jpg",
+    "static/media/Flight-iron-menu.webp": "/static/media/Flight-iron-menu.fc2595f87a4a48150a4a.webp",
+    "static/media/dailydriven-brosur.jpg": "/static/media/dailydriven-brosur.c412e397d567a1c175e9.jpg",
+    "static/media/VLAB.webp": "/static/media/VLAB.0a31ba9cbb1816b1b3a3.webp",
+    "static/media/Laser-presisi-post.webp": "/static/media/Laser-presisi-post.cca5b7f7630451f2119a.webp",
+    "static/media/Covid-insta-post.jpg": "/static/media/Covid-insta-post.b71ce2d2c33d78224e67.jpg",
+    "static/media/urbiaid.webp": "/static/media/urbiaid.d15f6b8dae612030903c.webp",
+    "static/media/dailydriven.webp": "/static/media/dailydriven.252211a065a88300510b.webp",
+    "index.html": "/index.html",
+    "main.6c9ec6a8.css.map": "/static/css/main.6c9ec6a8.css.map",
+    "main.b5b66a00.js.map": "/static/js/main.b5b66a00.js.map",
+    "453.23d5dc6d.chunk.js.map": "/static/js/453.23d5dc6d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6c9ec6a8.css",
+    "static/js/main.b5b66a00.js"
+  ]
+}

@@ -16,8 +16,8 @@ const images = [
 function PlaygroundSection (){
     return(
         <div id="playground">
-            <h2 className="font-syne font-extrabold text-4xl text-left text-white border-b-2 pb-4 xl:text-6xl">Playground</h2>
-            <p className="text-left text-white text-base pt-4 mb-12 xl:pr-[50%] xl:text-lg">My journey as a web developer started from graphic design. I have a passion for creating beautiful and functional websites that communicate effectively with the target audience. I have learned UI design and web development skills to deliver high-quality websites.</p>
+            <h2 className="font-syne font-extrabold text-4xl text-left text-white xl:text-6xl">Playground</h2>
+            <p className="text-left text-white text-base py-8 xl:pl-[60%] lg:text-base">My journey as a web developer started from graphic design. I have a passion for creating beautiful and functional websites that communicate effectively with the target audience. I have learned UI design and web development skills to deliver high-quality websites.</p>
                 <div className="">
                     <div className="w-full columns-2 space-y-6 gap-6 lg:columns-4">
                         <div>

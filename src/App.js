@@ -18,7 +18,7 @@ function App() {
       <div className='mb-48'>
         <PlaygroundSection />
       </div>
-      <div className='mb-48'>
+      <div className='mb-52'>
         <GetInTouchSection />
       </div>
       <div className="overflow-hidden">

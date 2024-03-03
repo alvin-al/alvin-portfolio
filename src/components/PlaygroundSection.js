@@ -17,7 +17,7 @@ function PlaygroundSection (){
     return(
         <div id="playground">
             <h2 className="font-syne font-extrabold text-4xl text-left text-white xl:text-6xl">Playground</h2>
-            <p className="text-left text-white text-base py-8 lg:pl-[55%]  xl:pl-[60%] xl:text-lg">My journey as a web developer started from graphic design. I have a passion for creating beautiful and functional websites that communicate effectively with the target audience. I have learned UI design and web development skills to deliver high-quality websites.</p>
+            <p className="text-left text-white text-base pt-4 pb-10 lg:pl-[55%]  xl:pl-[60%] xl:text-lg">My journey as a web developer started from graphic design. I have a passion for creating beautiful and functional websites that communicate effectively with the target audience. I have learned UI design and web development skills to deliver high-quality websites.</p>
                 <div className="">
                     <div className="w-full columns-2 space-y-4 lg:space-y-6 gap-4 lg:gap-6 lg:columns-4">
                         <div>

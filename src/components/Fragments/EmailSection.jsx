@@ -1,7 +1,7 @@
 import React from "react";
-import EmailForm from "./EmailForm";
+import EmailForm from "../Elements/EmailForm";
 
-const GetInTouchSection = () =>{
+const EmailSection = () =>{
     return(
         <div id="getintouch">
             <h2 className="font-syne font-extrabold text-4xl text-left text-white xl:text-6xl">Get In Touch</h2>
@@ -16,4 +16,4 @@ const GetInTouchSection = () =>{
 
 
 
-export default GetInTouchSection;
+export default EmailSection;

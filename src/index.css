@@ -5,9 +5,14 @@
 @tailwind components;
 @tailwind utilities;  
 
-html {
+body,html {
+    margin: 0;
+    padding: 0;
     font-family: "Plus Jakarta Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+}
+* {
+    box-sizing: border-box;
 }

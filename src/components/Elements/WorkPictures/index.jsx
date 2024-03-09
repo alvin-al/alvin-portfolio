@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function WorkBlock ({src, title}){
+function WorkPictures ({src, title}){
     return(
         <div className='mb-8'>
             <img src={src} alt="src" />
@@ -10,4 +10,4 @@ function WorkBlock ({src, title}){
     );
 };
 
-export default WorkBlock;
+export default WorkPictures;

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Lightbox } from "react-modal-image";
+import React, { useState } from "react"
+import { Lightbox } from "react-modal-image"
 
 
 const PlaygroundImages = (props) => {
@@ -14,15 +14,14 @@ const PlaygroundImages = (props) => {
     };
 
     return (
-        <>
+        <div>
             <div key={props.ind} className="">
-                <img src={props.src} alt={props.alt} className="rounded-sm hover:scale-95 hover:opacity-90 transition ease-in-out delay-100" onClick={openLightbox}/>
+                <img src={props.src} alt={props.alt} className="rounded-sm hover:scale-[97%] hover:opacity-90 transition ease-in-out delay-30" onClick={openLightbox}/>
             </div>
         {isOpen && (
-        <Lightbox medium={props.src} small={props.src} alt={props.alt} onClose={closeLightbox} hideDownload="true" hideZoom="true"
-        />
-      )};
-        </>
+        <img src={props.src}/>
+      )}
+        </div>
     )
 }
 

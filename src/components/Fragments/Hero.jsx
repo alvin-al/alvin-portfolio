@@ -2,7 +2,7 @@ import Navbar from "../Elements/Navbar";
 
 const Hero = () => {
     return(
-        <div className="flex flex-col justify-between h-[96vh]" id="heroBanner" >
+        <div className="flex flex-col justify-between h-[93vh] md:h-[96vh]" id="heroBanner" >
             <div id="heroBanner-caption">
                 <p className="text-right pl-24 text-white text-base md:pl-96 lg:pl-[60%] xl:text-lg">Hi, I am Alvin a web developer based in Bogor, Indonesia. Currently pursuing a degree in information systems at the Open University. I love to learn any field like design, tech, and web development. Feel free to explore my works and my thought</p>
             </div>

@@ -15,7 +15,7 @@ I'm dedicated to continuous learning and improvement, always seeking out opportu
 
 ## Contact Information
 
-Feel free to reach out to me via [my email](mailto:alvinxal@gmail.com) or through the contact form on my website.
+Feel free to reach out to me via [email](mailto:alvinxal@gmail.com) or through the contact form on my website.
 
 ## Social Media
 

@@ -21,6 +21,6 @@ Feel free to reach out to me via [my email](mailto:alvinxal@gmail.com) or throug
 
 Connect with me on social media:
 
-- [LinkedIn](https://www.linkedin.com/in/alvinxal/))
+- [LinkedIn](https://www.linkedin.com/in/alvinxal/)
 - [Twitter](https://twitter.com/alvinxal)
 - [GitHub](https://github.com/alvin-al)

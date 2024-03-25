@@ -5,7 +5,7 @@ import ErenStreetwear from '../../assets/images/Eren-Streetwear.webp';
 import Vlab from '../../assets/images/VLAB.webp';
 import LaserPresisi from '../../assets/images/Laser-presisi-post.webp';
 import FlightMenu from '../../assets/images/Flight-iron-menu.webp';
-import Modal from "../Elements/Modal";
+
 import PlaygroundImages from "../Elements/PlaygroundImages";
 
 
@@ -34,6 +34,8 @@ const Playground = () => {
                     <PlaygroundImages src={image.src} alt={image.alt} ind={index}/>
                 ))}
             </div>
+            
+
             
         </div>
     );

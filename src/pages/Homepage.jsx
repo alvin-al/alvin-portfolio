@@ -3,6 +3,7 @@ import Hero from "../components/Fragments/Hero.jsx";
 import Playground from "../components/Fragments/Playground.jsx";
 import Work from "../components/Fragments/Work.jsx";
 import EmailSection from "../components/Fragments/EmailSection.jsx";
+import { useGSAP } from "@gsap/react";
 
 const Homepage = () => {
     return (

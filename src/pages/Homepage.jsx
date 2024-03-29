@@ -6,20 +6,20 @@ import EmailSection from "../components/Fragments/EmailSection.jsx";
 
 const Homepage = () => {
     return (
-        <div className="">
-            <div className="mb-48">
+        <div className="flex flex-col gap-64">
+            <div>
                 <Hero />
             </div>
-            <div className="mb-48">
+            <div>
                 <Work />
             </div>
-            <div className="mb-48">
+            <div>
                 <Playground />
             </div>
-            <div className="mb-48">
+            <div>
                 <EmailSection />
             </div>
-            <div className="">
+            <div className="-p-64">
                 <FooterSec />
             </div>
         </div>

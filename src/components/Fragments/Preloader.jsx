@@ -15,13 +15,13 @@ const Loader = () => {
         const loadingBar = document.querySelector('.loading-bar');
 
 
-        gsap.fromTo(loadingBar, {width: "0%"}, {width: "100%", duration: 4})
+        gsap.fromTo(loadingBar, {width: "0%"}, {width: "100%", duration: 3})
     }, []);
 
 
 
     return (
-        <div className="loader h-[100vh] flex flex-col justify-center border-white oflow w-full overflow-hidden">
+        <div className="loader h-[95vh] lg:h-[97vh] flex flex-col justify-center border-white oflow w-full overflow-hidden">
             <div className="flex flex-col gap-4 m-auto">
                 <div className="text-white font-semibold">
                     <span>ALVIN</span>

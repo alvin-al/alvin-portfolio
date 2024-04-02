@@ -5,22 +5,26 @@ import Loader from './components/Fragments/Preloader';
 import Homepage from './pages/Homepage';
 
 function App() {
-   const [showLoader, setShowLoader] = useState(true);
-   document.body.classList.add('no-scroll');
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowLoader(false);
-      document.body.classList.remove('no-scroll');
-    }, 5000); // 6 seconds
-
-    return () => clearTimeout(timer);
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3000);
   }, []);
 
   return (
     <div className="App flex p-4 bg-[#171717] flex-col">
-      {showLoader && <Loader />}
-      <Homepage />
+
+      {isLoading ? (
+        <Loader />
+      ) : (
+          <>
+            <Homepage />
+          </>
+      )}
+      
     </div>
   );
 }

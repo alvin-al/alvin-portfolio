@@ -3,10 +3,8 @@ import Hero from "../components/Fragments/Hero.jsx";
 import Playground from "../components/Fragments/Playground.jsx";
 import Work from "../components/Fragments/Work.jsx";
 import EmailSection from "../components/Fragments/EmailSection.jsx";
-import LocomotiveScroll from 'locomotive-scroll';
 
 const Homepage = () => {
-    const locomotiveScroll = new LocomotiveScroll();
 
 
     return (

@@ -14,7 +14,7 @@ function Work (){
             <p className="text-left text-white text-base pt-4 pb-10 lg:pl-[55%]  xl:pl-[60%] xl:text-lg">{p}</p>
             <div id="all-works" className="flex gap-2 flex-col md:flex-row md:gap-8">
                 <WorkPictures src={dailydriven} title="Dailydriven Garage" link={''}/>
-                <WorkPictures src={urbia} title="Urbia ID" link={'http://urbia.id'}/>
+                <WorkPictures src={urbia} title="Urbia ID" link={'http://urbia.vercel.app'}/>
             </div>
         </div>
     );

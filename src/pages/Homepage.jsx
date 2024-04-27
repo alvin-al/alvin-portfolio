@@ -23,7 +23,7 @@ const Homepage = () => {
             <div>
                 <EmailSection />
             </div>
-            <div className="-p-64">
+            <div className="-p-64 -mt-32">
                 <FooterSec />
             </div>
         </div>

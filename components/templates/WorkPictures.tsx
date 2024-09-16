@@ -16,6 +16,8 @@ function WorkPictures({ src, title, link }: WorkPicturesProps) {
           src={src}
           alt={title}
           className='cursor-pointer rounded-sm hover:scale-[97%] hover:opacity-90 transition ease-in-out delay-30'
+          width={800}
+          height={500}
         />
       </a>
       <SubHeader2 classname='text-2xl'>{title}</SubHeader2>

@@ -18,6 +18,48 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  position: relative; /* Supaya pseudo-element bisa di-overlay */
+  background-image: radial-gradient(
+      at 60% 15%,
+      hsla(0, 0%, 0%, 1) 0%,
+      hsla(0, 0%, 0%, 0) 100%
+    ),
+    radial-gradient(
+      at 80% 50%,
+      hsla(238, 51%, 25%, 1) 0%,
+      hsla(238, 51%, 25%, 0) 100%
+    ),
+    radial-gradient(at 20% 80%, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 0) 100%),
+    radial-gradient(
+      at 95% 60%,
+      hsla(238, 51%, 25%, 1) 0%,
+      hsla(238, 51%, 25%, 0) 100%
+    ),
+    radial-gradient(at 40% 10%, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 0) 100%),
+    radial-gradient(
+      at 5% 25%,
+      hsla(238, 51%, 25%, 1) 0%,
+      hsla(238, 51%, 25%, 0) 100%
+    ),
+    radial-gradient(at 30% 70%, hsla(0, 0%, 0%, 1) 0%, hsla(0, 0%, 0%, 0) 100%);
+}
+
+body::before {
+  content: "";
+  position: fixed; /* Agar tetap di tempat meskipun di-scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Supaya tidak mengganggu interaksi */
+  background-image: url("https://transparenttextures.com/patterns/otis-redding.png"); /* Hard grain texture */
+  opacity: 1; /* Atur intensitas grain */
+  z-index: 0; /* Letakkan di bawah konten */
+}
+
+body * {
+  position: relative; /* Pastikan konten berada di atas grain */
+  z-index: 2; /* Konten di atas pseudo-element */
 }
 
 @layer utilities {
@@ -25,4 +67,3 @@ body {
     text-wrap: balance;
   }
 }
-

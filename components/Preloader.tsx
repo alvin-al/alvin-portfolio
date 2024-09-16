@@ -6,7 +6,7 @@ const Loader = () => {
 
   //Alvinalportfolio animation
   useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       const webtitle = document.querySelector(".web-title");
       const t1 = gsap.timeline();
       t1.from(webtitle, {

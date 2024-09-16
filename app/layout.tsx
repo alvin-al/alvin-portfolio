@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Syne, Plus_Jakarta_Sans } from "next/font/google";
-
-export const syne = Syne({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-syne",
-});
+import { Plus_Jakarta_Sans } from "next/font/google";
 
 const PlusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -25,7 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${PlusJakarta.className} --font-syne antialiased`}>
+      <head>
+        <link rel='icon' href='/favicon.ico' sizes='any' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='theme-color' content='#000000' />
+        <meta name='My Portfolio' content='Alvin Al - Portfolio Web' />
+      </head>
+      <body className={`${PlusJakarta.className} antialiased`}>
         <main>{children}</main>
       </body>
     </html>

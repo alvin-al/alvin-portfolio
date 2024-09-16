@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alvin Al Portfolio
 
-## Getting Started
+Welcome to my personal website, where I showcase my projects and share a bit about myself. This website is built using HTML, Tailwind CSS, and React.
 
-First, run the development server:
+## About Me
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I'm Alvin Al, currently pursuing a degree in Information Systems at Open University of Indonesia. With a background in Farm Administration and graphic design, I've developed a diverse skill set that combines both creative and technical expertise.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Driven by my passion for problem-solving and creativity, I spend much of my time in front of the computer crafting something. Currently, I'm focusing on frontend development, with plans to transition into React Native or full-stack development in the future.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+I have a particular fondness for styling web applications using Tailwind CSS because I work as graphic designer before. I believe in the power of minimalist and simple design, employing a straightforward approach to create elegant and user-friendly interfaces.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+I'm dedicated to continuous learning and improvement, always seeking out opportunities to expand my knowledge and skills in the field of software engineering.
 
-## Learn More
+## Contact Information
 
-To learn more about Next.js, take a look at the following resources:
+Feel free to reach out to me via [email](mailto:alvinxal@gmail.com) or through the contact form on my website.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Social Media
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Connect with me on social media:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [LinkedIn](https://www.linkedin.com/in/alvinxal/)
+- [Twitter](https://twitter.com/alvinxal)
+- [GitHub](https://github.com/alvin-al)

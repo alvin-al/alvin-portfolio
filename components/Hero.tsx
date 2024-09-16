@@ -1,6 +1,9 @@
-import { syne } from "@/app/layout";
+import { Syne } from "next/font/google";
 import Navbar from "./templates/Navbar";
 
+const syne = Syne({
+  subsets: ["latin"],
+});
 
 const Hero = () => {
   return (

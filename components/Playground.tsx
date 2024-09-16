@@ -6,7 +6,7 @@ import Vlab from "@/public/playground_image/VLAB.webp";
 import LaserPresisi from "@/public/playground_image/Laser-presisi-post.webp";
 import FlightMenu from "@/public/playground_image/Flight-iron-menu.webp";
 import PlaygroundImages from "@/components/templates/PlaygroundImages";
-import { syne } from "@/app/layout";
+import SubHeader from "./ui/SubHeader";
 
 const images = [
   { src: CovidInstaPost, alt: "Covid Instagram Post" },
@@ -23,11 +23,7 @@ const playgroundDescription =
 const Playground = () => {
   return (
     <div id='playground'>
-      <h2
-        className={`${syne.className} font-extrabold text-4xl text-left text-white xl:text-6xl`}
-      >
-        Playground
-      </h2>
+      <SubHeader>Playground</SubHeader>
       <p className='pt-4 pb-10 lg:pl-[55%]  xl:pl-[60%] xl:text-lg'>
         {playgroundDescription}
       </p>
@@ -35,7 +31,7 @@ const Playground = () => {
       <div className='w-full columns-2 space-y-4 lg:space-y-6 gap-4 lg:gap-6 lg:columns-4 '>
         {images.map((image, index) => (
           <PlaygroundImages
-            src={image.src}
+            src={image.src.src}
             alt={image.alt}
             ind={index}
             key={index}

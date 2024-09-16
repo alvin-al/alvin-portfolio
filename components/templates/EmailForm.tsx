@@ -20,26 +20,13 @@ function EmailForm() {
           className='text-white bg-transparent border-b mb-8 p-1'
           placeholder='Email'
         />
-        <ValidationError
-          prefix='Email'
-          field='email'
-          errors={state.errors}
-          className='text-white'
-          placeholder='Message'
-        />
         <textarea
           id='message'
           name='message'
           className='text-white bg-transparent border-b mb-8 p-1 h-24'
           placeholder='Message'
         />
-        <ValidationError
-          prefix='Message'
-          field='message'
-          errors={state.errors}
-          className='text-white'
-        />
-
+        <ValidationError errors={state.errors} className='text-white' />
         <button
           type='submit'
           disabled={state.submitting}

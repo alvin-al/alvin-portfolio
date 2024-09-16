@@ -1,8 +1,14 @@
 import React from "react";
 import Image from "next/image";
-import { syne } from "@/app/layout";
+import SubHeader2 from "../ui/SubHeader2";
 
-function WorkPictures({ src, title, link }) {
+interface WorkPicturesProps {
+  src: string;
+  title: string;
+  link: string;
+}
+
+function WorkPictures({ src, title, link }: WorkPicturesProps) {
   return (
     <div className='mb-8'>
       <a href={link}>
@@ -12,9 +18,7 @@ function WorkPictures({ src, title, link }) {
           className='cursor-pointer rounded-sm hover:scale-[97%] hover:opacity-90 transition ease-in-out delay-30'
         />
       </a>
-      <h2 className={`${syne.className} font-extrabold text-2xl text-left text-white my-2`}>
-        {title}
-      </h2>
+      <SubHeader2 classname='text-2xl'>{title}</SubHeader2>
     </div>
   );
 }

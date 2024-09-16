@@ -1,6 +1,12 @@
 import Image from "next/image";
 
-const PlaygroundImages = (props) => {
+interface PlaygroundImagesProps {
+  ind: number;
+  src: string;
+  alt: string;
+}
+
+const PlaygroundImages = (props: PlaygroundImagesProps) => {
   return (
     <div>
       <div key={props.ind} className=''>

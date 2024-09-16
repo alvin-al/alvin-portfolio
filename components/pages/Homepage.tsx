@@ -4,7 +4,6 @@ import Hero from "@/components/Hero";
 import Playground from "@/components/Playground";
 import Work from "@/components/Work";
 import EmailSection from "@/components/EmailSection";
-import LocomotiveScroll from "locomotive-scroll";
 
 const Homepage: React.FC = () => {
   return (

@@ -34,7 +34,12 @@ const Playground = () => {
 
       <div className='w-full columns-2 space-y-4 lg:space-y-6 gap-4 lg:gap-6 lg:columns-4 '>
         {images.map((image, index) => (
-          <PlaygroundImages src={image.src} alt={image.alt} ind={index} />
+          <PlaygroundImages
+            src={image.src}
+            alt={image.alt}
+            ind={index}
+            key={index}
+          />
         ))}
       </div>
     </div>

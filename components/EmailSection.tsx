@@ -11,14 +11,14 @@ const emailDescription =
 
 const EmailSection = () => {
   return (
-    <div id='getintouch'>
+    <div id='getintouch' >
       <SubHeader>Get In Touch</SubHeader>
-      <p className='pt-4 pb-10 lg:pl-[55%]  xl:pl-[60%] xl:text-lg'>
+      <p className='pt-4 pb-10  lg:pl-[55%]  xl:pl-[60%] xl:text-lg text-white'>
         {emailDescription}
       </p>
       <div>
         <EmailForm />
-        <div className='flex flex-row justify-center md:justify-start gap-3 md:gap-6 lg:pl-[55%] xl:pl-[60%] md:px-52 md:items-start mt-24'>
+        <div className='flex flex-row justify-center md:justify-start gap-3 md:gap-6 lg:pl-[55%] xl:pl-[60%] md:px-52 md:items-start py-12'>
           <a href='https://github.com/alvin-al'>
             <button className='hover:bg-slate-700 border border-white w-12 h-12 rounded-full flex justify-center items-center'>
               <Image src={github} alt='github' />

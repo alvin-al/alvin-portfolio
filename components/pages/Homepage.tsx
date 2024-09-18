@@ -20,7 +20,7 @@ const Homepage: React.FC = () => {
       <div>
         <EmailSection />
       </div>
-      <div className='-p-64 -mt-32'>
+      <div className='-mt-64'>
         <FooterSec />
       </div>
     </div>

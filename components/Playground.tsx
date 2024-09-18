@@ -24,7 +24,7 @@ const Playground = () => {
   return (
     <div id='playground'>
       <SubHeader>Playground</SubHeader>
-      <p className='pt-4 pb-10 lg:pl-[55%]  xl:pl-[60%] xl:text-lg'>
+      <p className='pt-4 pb-10 lg:pl-[55%]  xl:pl-[60%] xl:text-lg text-white'>
         {playgroundDescription}
       </p>
 

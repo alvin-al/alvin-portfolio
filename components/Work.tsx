@@ -14,7 +14,7 @@ function Work() {
       <p className='text-left text-white text-base pt-4 pb-10 lg:pl-[55%]  xl:pl-[60%] xl:text-lg'>
         {p}
       </p>
-      <div id='all-works' className='flex gap-2 flex-col md:flex-row md:gap-8'>
+      <div id='all-works' className='flex gap-2 flex-col md:flex-row md:gap-8 h-fit w-full bg-slate-400'>
         <WorkPictures
           src={urbia.src}
           title='Urbia ID'

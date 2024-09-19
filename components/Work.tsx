@@ -1,6 +1,5 @@
 import React from "react";
 import WorkPictures from "./templates/WorkPictures";
-import dailydriven from "@/public/works/dailydriven.webp";
 import urbia from "@/public/works/urbiaid.jpeg";
 import SubHeader from "./ui/SubHeader";
 

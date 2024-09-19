@@ -11,22 +11,19 @@ interface WorkPicturesProps {
 
 function WorkPictures({ src, title, link }: WorkPicturesProps) {
   return (
-    <div className='w-full h-full flex'>
-      <div className='w-1/2 gap-2 flex flex-col'>
-        <div className='relative w-full h-auto'>
-          <Link href={link}>
-            <Image
-              src={src}
-              alt={title}
-              className='cursor-pointer rounded-sm hover:shadow-md hover:scale-[97%] hover:opacity-90 transition ease-in-out delay-30'
-              width={1200}
-              height={630}
-            />
-          </Link>
+    <div className=' flex flex-col gap-2'>
+      <Link href={link}>
+        <div className="w-full h-fit bg-yellow-50 cursor-pointer rounded-md hover:shadow-xl hover:opacity-90 transition ease-in-out delay-30 overflow-hidden">
+          <Image
+            src={src}
+            alt={title}
+            className='w-full h-full object-cover '
+            width={1000}
+            height={630}
+          />
         </div>
-        <SubHeader2 classname='text-2xl'>{title}</SubHeader2>
-      </div>
-      <div className='w-1/2'></div>
+      </Link>
+      <SubHeader2 classname='text-2xl'>{title}</SubHeader2>
     </div>
   );
 }

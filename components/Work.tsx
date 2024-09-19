@@ -13,8 +13,8 @@ function Work() {
       <p className='text-left text-white text-base pt-4 pb-10 lg:pl-[55%]  xl:pl-[60%] xl:text-lg'>
         {p}
       </p>
-      <div id='all-works' className=''>
-        <div>
+      <div id='all-works' className='w-full'>
+        <div className="lg:w-3/4">
           <WorkPictures
             src={urbia.src}
             title='Urbia ID'

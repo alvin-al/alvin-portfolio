@@ -13,10 +13,11 @@ const Hero = () => {
     >
       <div id='heroBanner-caption'>
         <p className='text-right pl-24 text-white text-base md:pl-96 lg:pl-[60%] xl:text-lg'>
-          Hi, I am Alvin a web developer based in Bogor, Indonesia. Currently
-          pursuing a degree in information systems at the Open University. I
-          love to learn any field like design, tech, and web development. Feel
-          free to explore my works and my thought
+          Hi, I’m Alvin, a passionate web developer from Bogor, Indonesia. I’m
+          currently pursuing a degree in Information Systems at the Open
+          University. My interests span across design, technology, and web
+          development, and I’m always eager to learn and explore new things.
+          Feel free to check out my works and thoughts below!
         </p>
       </div>
       <div id='heroBanner-name' className='flex flex-col '>

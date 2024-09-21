@@ -1,23 +1,33 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-const SplitTextUpGSAP = ({ children, className }) => {
-  const textRef = useRef(null); // Ref untuk container
+interface SplitTextUpProps {
+  children: string;
+  className?: string;
+}
+
+const SplitTextUp: React.FC<SplitTextUpProps> = ({
+  children,
+  className = "",
+}: SplitTextUpProps) => {
+  const textRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const letters = textRef.current.children;
+    if (textRef.current) {
+      const letters = Array.from(textRef.current.children) as HTMLSpanElement[];
 
-    gsap.fromTo(
-      letters,
-      { opacity: 0, y: 30, delay: 0.1 }, // Start state
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.04, // Interval between each letter
-        ease: "back.out(1.7)", // Easing
-      }
-    );
+      gsap.fromTo(
+        letters,
+        { opacity: 0, y: 30, delay: 0.1 }, // Start state
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.04, // Interval between each letter
+          ease: "back.out(1.7)", // Easing
+        }
+      );
+    }
   }, [children]); // Run effect when children changes
 
   return (
@@ -34,4 +44,4 @@ const SplitTextUpGSAP = ({ children, className }) => {
   );
 };
 
-export default SplitTextUpGSAP;
+export default SplitTextUp;

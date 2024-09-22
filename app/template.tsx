@@ -1,6 +1,6 @@
 "use client";
 import { animatePageIn } from "@/utils/animation";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 
 interface templateProps {
   children: React.ReactNode;

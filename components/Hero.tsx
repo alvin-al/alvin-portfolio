@@ -22,12 +22,12 @@ const Hero = () => {
       className='flex flex-col justify-between h-[90vh] md:h-[96vh]'
       id='heroBanner'
     >
-      <div id='heroBanner-caption'>
+      <div id='heroBanner-caption' className='flex items-end flex-col '>
         {helloText.map((text, index) => (
           <SplitTextLine
             key={index}
-            className='justify-end pl-24 text-white text-base md:pl-96 lg:pl-[60%] xl:text-lg'
-            index={index}
+            className='self-end text-white text-base xl:text-lg'
+            index={index + 20}
           >
             <span>{text}</span>
           </SplitTextLine>
@@ -42,7 +42,10 @@ const Hero = () => {
         {/* <p className='text-center md:text-left text-white text-xl uppercase'>
           Web Developer
         </p> */}
-        <SplitTextLine className='text-center md:text-left text-white text-xl uppercase'>
+        <SplitTextLine
+          className='text-center md:text-left text-white text-xl uppercase'
+          index={5}
+        >
           Web Developer
         </SplitTextLine>
       </div>

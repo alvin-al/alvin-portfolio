@@ -18,7 +18,7 @@ const SplitTextLine: React.FC<SplitTextLineProps> = ({
   useEffect(() => {
     if (lineRef.current) {
       const line = Array.from(lineRef.current.children);
-      const delayTime = (index || 0) * 0.05;
+      const delayTime = (index || 0) * 0.1;
 
       gsap.fromTo(
         line,

@@ -18,8 +18,9 @@ const SplitTextUp: React.FC<SplitTextUpProps> = ({
 
       gsap.fromTo(
         letters,
-        { opacity: 0, y: 30, delay: 0.1 }, // Start state
+        { opacity: 0, y: 20 }, // Start state
         {
+          delay: 1,
           opacity: 1,
           y: 0,
           duration: 1,

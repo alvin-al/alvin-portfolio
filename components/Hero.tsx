@@ -3,6 +3,7 @@ import { Syne } from "next/font/google";
 import Navbar from "./templates/Navbar";
 import SplitTextUp from "./ui/SplitTextUp";
 import SplitTextLine from "./ui/SplitTextLine";
+import LoginNavbar from "./templates/LoginNavbar";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ const Hero = () => {
       className='flex flex-col justify-between h-[90vh] md:h-[96vh]'
       id='heroBanner'
     >
+      <LoginNavbar />
       <div id='heroBanner-caption' className='flex items-end flex-col '>
         {helloText.map((text, index) => (
           <SplitTextLine

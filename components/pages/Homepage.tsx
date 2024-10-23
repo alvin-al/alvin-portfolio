@@ -6,6 +6,7 @@ import Work from "@/components/Work";
 import EmailSection from "@/components/EmailSection";
 
 const Homepage: React.FC = () => {
+  
   return (
     <div className='flex flex-col gap-64'>
       <div>

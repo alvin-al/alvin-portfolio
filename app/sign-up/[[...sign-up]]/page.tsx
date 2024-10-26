@@ -1,9 +1,10 @@
-// import { SignUp } from "@clerk/nextjs";
+import { SignUp } from "@clerk/nextjs";
+import React from "react";
 
-// export default function Page() {
-//   return (
-//     <div className='flex w-full h-screen items-center justify-center'>
-//       <SignUp />
-//     </div>
-//   );
-// }
+export default function Page(): React.ReactElement {
+  return (
+    <div className='flex w-full h-screen items-center justify-center'>
+      <SignUp />
+    </div>
+  );
+}

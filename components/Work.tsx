@@ -14,12 +14,8 @@ function Work() {
         {p}
       </p>
       <div id='all-works' className='w-full'>
-        <div className="lg:w-3/4">
-          <WorkPictures
-            src={urbia.src}
-            title='Urbia ID'
-            link={"http://urbia.id"}
-          />
+        <div className='lg:w-1/2'>
+          <WorkPictures src={urbia.src} title='Urbia ID' link={"urbia-id"} />
         </div>
       </div>
     </div>

@@ -11,9 +11,9 @@ interface WorkPicturesProps {
 
 function WorkPictures({ src, title, link }: WorkPicturesProps) {
   return (
-    <div className=' flex flex-col gap-2'>
-      <Link href={link}>
-        <div className="w-full h-fit bg-yellow-50 cursor-pointer rounded-md hover:shadow-xl hover:opacity-90 transition ease-in-out delay-30 overflow-hidden">
+    <Link href={`/products/${link}`}>
+      <div className='flex flex-col gap-2 rounded-md hover:scale-[98%] hover:opacity-90 transition ease-in-out delay-30 '>
+        <div className='w-full h-fit bg-yellow-50 cursor-pointer rounded-md hover:shadow-xl overflow-hidden'>
           <Image
             src={src}
             alt={title}
@@ -22,9 +22,10 @@ function WorkPictures({ src, title, link }: WorkPicturesProps) {
             height={630}
           />
         </div>
-      </Link>
-      <SubHeader2 classname='text-2xl'>{title}</SubHeader2>
-    </div>
+
+        <SubHeader2 classname='text-2xl'>{title}</SubHeader2>
+      </div>
+    </Link>
   );
 }
 

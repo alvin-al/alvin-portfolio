@@ -1,7 +1,4 @@
 import type { Metadata } from "next";
-import {
-  ClerkProvider
-} from "@clerk/nextjs";
 import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
@@ -21,18 +18,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang='en'>
-        <head>
-          <link rel='icon' href='/favicon.ico' sizes='any' />
-          <meta name='viewport' content='width=device-width, initial-scale=1' />
-          <meta name='theme-color' content='#000000' />
-          <meta name='My Portfolio' content='Alvin Al - Portfolio Web' />
-        </head>
-        <body className={`${PlusJakarta.className} antialiased`}>
-          <main>{children}</main>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang='en'>
+      <head>
+        <link rel='icon' href='/favicon.ico' sizes='any' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='theme-color' content='#000000' />
+        <meta name='My Portfolio' content='Alvin Al - Portfolio Web' />
+      </head>
+      <body className={`${PlusJakarta.className} antialiased`}>
+        <main>{children}</main>
+      </body>
+    </html>
   );
 }

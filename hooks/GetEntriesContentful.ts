@@ -16,7 +16,7 @@ export default function GetEntriesContentful() {
       .getEntries()
       .then((response) => {
         const mappedEntries = response.items.map((item: any) => ({
-          mainImage: "http://" + item.fields.mainImage.fields.file.url,
+          mainImage: "http:" + item.fields.mainImage.fields.file.url,
           title: item.fields.title,
           slug: item.fields.slug,
           id: item.sys.id,

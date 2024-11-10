@@ -1,15 +1,33 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import WorkPictures from "./templates/WorkPictures";
-import urbia from "@/public/works/urbiaid.jpeg";
 import SubHeader from "./ui/SubHeader";
 import client from "@/utils/contentfulClient";
 
+interface Project {
+  sys: {
+    id: string;
+  };
+  fields: {
+    title: string;
+    slug: string;
+    mainImage: {
+      fields: {
+        file: {
+          url: string;
+        };
+      };
+    };
+  };
+}
+
 export default function Work() {
-  const [projects, setProjects] = React.useState([]);
+  const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
-    client.getEntries().then((response) => setProjects(response.items));
+    client.getEntries({ content_type: 'project' }).then((response) => {
+      setProjects(response.items as unknown as Project[]);
+    });
   }, []);
 
   console.log(projects);

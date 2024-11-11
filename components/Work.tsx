@@ -21,7 +21,8 @@ export default function Work() {
           <WorkPictures
             src={project.mainImage}
             title={project.title}
-            link={project.slug}
+            // link={project.slug}
+            link='https://urbia.vercel.app'
             key={project.id}
           />
         ))}

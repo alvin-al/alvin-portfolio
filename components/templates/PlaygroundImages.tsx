@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 
 interface PlaygroundImagesProps {
@@ -7,6 +8,7 @@ interface PlaygroundImagesProps {
 }
 
 const PlaygroundImages = (props: PlaygroundImagesProps) => {
+
   return (
     <div>
       <div key={props.ind} className=''>

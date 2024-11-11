@@ -9,11 +9,12 @@ const syne = Syne({
 });
 
 const helloText = [
-  "Hi, I’m Alvin, a passionate web developer from Bogor, Indonesia.",
-  "I’m currently pursuing a degree in Information Systems at the Open",
-  "University. My interests span across design, technology, and web ",
-  "development, and I’m always eager to learn and explore new things.",
-  "Feel free to check out my works and thoughts below!",
+  // "Hi, I’m Alvin, a passionate web developer from Bogor, Indonesia.",
+  // "I’m currently pursuing a degree in Information Systems at the Open",
+  // "University. My interests span across design, technology, and web ",
+  // "development, and I’m always eager to learn and explore new things.",
+  // "Feel free to check out my works and thoughts below!",
+  "Hi, I’m Alvin, a passionate web developer from Bogor, Indonesia. I’m currently pursuing a degree in Information Systems at the Open University. My interests span across design, technology, and web development, and I’m always eager to learn and explore new things, Feel free to check out my works and thoughts below!",
 ];
 
 const Hero = () => {
@@ -22,7 +23,10 @@ const Hero = () => {
       className='flex flex-col justify-between h-[90vh] md:h-[96vh]'
       id='heroBanner'
     >
-      <div id='heroBanner-caption' className='flex items-end flex-col '>
+      <div
+        id='heroBanner-caption'
+        className='flex items-end flex-col lg:w-2/5 self-end'
+      >
         {helloText.map((text, index) => (
           <SplitTextLine
             key={index}

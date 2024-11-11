@@ -11,12 +11,12 @@ interface WorkPicturesProps {
 
 function WorkPictures({ src, title, link }: WorkPicturesProps) {
   return (
-    <Link href={`/projects/${link}`}>
+    <Link href={`${link}`}>
       <div className='flex flex-col gap-2 rounded-md hover:scale-[98%] hover:opacity-90 transition ease-in-out delay-30 h-full w-full'>
         <div className='w-full h-fit bg-yellow-50 cursor-pointer rounded-md hover:shadow-xl overflow-hidden relative'>
           <Image
             src={src}
-            alt=''
+            alt='title'
             width={1000}
             height={800}
             className='object-cover'

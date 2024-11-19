@@ -22,7 +22,7 @@ export default function Work() {
             src={project.mainImage}
             title={project.title}
             // link={project.slug}
-            link='https://urbia.vercel.app'
+            link={project.websiteLink}
             key={project.id}
           />
         ))}

@@ -21,7 +21,6 @@ export default function Work() {
           <WorkPictures
             src={project.mainImage}
             title={project.title}
-            // link={project.slug}
             link={project.websiteLink}
             key={project.id}
           />

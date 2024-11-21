@@ -6,10 +6,12 @@ interface RoundedButton {
   children: string;
 }
 
-const RoundedButton = ({ className = "", children }: RoundedButton) => {
+const RoundedButton = ({ className, children }: RoundedButton) => {
   return (
     <div>
-      <button className="px-8 py-4 bg-gray-800 text-white text-lg rounded-full hover:bg-transparent border border-gray-800 hover:text-gray-800 transition ease-in-out delay-76 flex gap-1">
+      <button
+        className={`${className} px-8 py-4 bg-gray-800 text-white text-lg rounded-full hover:bg-transparent border border-gray-800 hover:text-gray-800 transition ease-in-out duration-75 flex gap-1`}
+      >
         {children}
         <MdArrowOutward size="1.2em" className="transition" />
       </button>

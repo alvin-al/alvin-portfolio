@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import SubHeader2 from "../ui/SubHeader2";
 import Link from "next/link";
 
 interface WorkPicturesProps {

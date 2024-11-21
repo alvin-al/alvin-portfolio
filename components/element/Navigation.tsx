@@ -25,10 +25,8 @@ const Navigation = () => {
       <div className="w-full">
         <ul className="hidden md:flex gap-8 text-base 2xl:text-lg font-medium justify-center">
           {itemMenu.map((item, index) => (
-            <li className="hover:text-gray-500">
-              <Link href={item.link} key={index}>
-                {item.title}
-              </Link>
+            <li className="hover:text-gray-500" key={index}>
+              <Link href={item.link}>{item.title}</Link>
             </li>
           ))}
         </ul>

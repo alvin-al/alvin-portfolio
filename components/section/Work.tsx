@@ -7,11 +7,8 @@ export default function Work() {
   const projects = GetEntriesContentful();
 
   return (
-    <div id="work">
-      <div
-        id="all-works"
-        className="flex flex-col xl:flex-row gap-12 py-48 xl:py-64"
-      >
+    <div id='work'>
+      <div id='all-works' className='flex flex-col lg:flex-row gap-12 xl:py-32'>
         {projects.map((project) => (
           <WorkPictures
             src={project.mainImage}

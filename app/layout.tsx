@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import Navigation from "@/components/element/Navigation";
 
 const PlusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -25,7 +26,8 @@ export default function RootLayout({
         <meta name='theme-color' content='#000000' />
         <meta name='My Portfolio' content='Alvin Al - Portfolio Web' />
       </head>
-      <body className={`${PlusJakarta.className} antialiased`}>
+      <body className={`${PlusJakarta.className} antialiased scroll-smooth`}>
+        <Navigation />
         <main>{children}</main>
       </body>
     </html>

@@ -6,13 +6,13 @@ import { SiTypescript } from "react-icons/si";
 
 const TechStackIcon = () => {
   return (
-    <div className="w-fit h-fit flex gap-4 text-gray-800">
-      <FaReact size="1.5em" />
-      <RiNextjsLine size="1.5em" />
-      <RiTailwindCssFill size="1.5em" />
-      <IoLogoJavascript size="1.5em" />
-      <SiTypescript size="1.5em" />
-      <FaFigma size="1.5em" />
+    <div className='w-fit h-fit flex gap-8 text-gray-800'>
+      <FaReact size='2em' />
+      <RiNextjsLine size='2em' />
+      <RiTailwindCssFill size='2em' />
+      <IoLogoJavascript size='2em' />
+      <SiTypescript size='2em' />
+      <FaFigma size='2em' />
     </div>
   );
 };

@@ -2,6 +2,7 @@ import Work from "@/components/section/Work";
 import HeroBanner from "@/components/alt_page/HeroBanner";
 import React from "react";
 import AboutMeShort from "@/components/section/AboutMeShort";
+import Contact from "@/components/section/Contact";
 
 const page = () => {
   return (
@@ -9,6 +10,7 @@ const page = () => {
       <HeroBanner />
       <AboutMeShort />
       <Work />
+      <Contact />
     </div>
   );
 };

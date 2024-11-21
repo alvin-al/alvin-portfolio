@@ -7,7 +7,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 const Homepage = () => {
   return (
-    <div className='h-4/5 flex flex-col pt-24 md:pt-32 gap-16'>
+    <div className='h-4/5 flex flex-col md:pt-32 gap-16'>
       {/* title */}
       <div className='flex flex-col gap-8'>
         <p className='text-5xl md:w-4/5 leading-snug font-medium'>

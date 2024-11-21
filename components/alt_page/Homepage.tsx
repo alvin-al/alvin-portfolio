@@ -11,10 +11,10 @@ const Homepage = () => {
       {/* title */}
       <div className='flex flex-col gap-8'>
         <p className='text-5xl w-4/5 leading-snug font-medium'>
-          Hey! I'm Alvin, a Bogor-based web dev into design and tech. Always
-          exploring. Check out my projects!
+          Clean, minimalist.
+          Sometimes, simplicity is the most useful tool.
         </p>
-        <p className='text-base font-medium'>Frontend - Web Developer</p>
+        <p className='text-base font-medium'>Alvin Al - Web Developer</p>
         <div className='w-fit h-fit flex gap-4 text-gray-800'>
           <FaReact size='1.5em' />
           <RiNextjsLine size='1.5em' />

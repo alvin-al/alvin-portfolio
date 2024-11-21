@@ -16,7 +16,7 @@ const Navigation = () => {
           AL
         </p>
       </Link>
-      <div className='flex gap-5 text-lg font-medium justify-center'>
+      <div className='hidden md:flex gap-5 text-lg font-medium justify-center'>
         <Link href='/'>
           <p>Home</p>
         </Link>

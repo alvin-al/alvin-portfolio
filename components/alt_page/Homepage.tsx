@@ -10,9 +10,9 @@ const Homepage = () => {
     <div className='h-4/5 flex flex-col pt-32 gap-16'>
       {/* title */}
       <div className='flex flex-col gap-8'>
-        <p className='text-5xl w-4/5 leading-snug font-medium'>
+        <p className='text-5xl md:w-4/5 leading-snug font-medium'>
           Clean, minimalist. <br />
-          Sometimes, simplicity is the most useful tool.
+          Sometimes, simplicity is the most useful and effective tool.
         </p>
         <p className='text-base font-medium'>Alvin Al - Web Developer</p>
         <div className='w-fit h-fit flex gap-4 text-gray-800'>

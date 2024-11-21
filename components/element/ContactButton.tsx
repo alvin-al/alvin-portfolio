@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BiLogoGmail, BiLogoTelegram } from "react-icons/bi";
 import Link from "next/link";
 

@@ -11,7 +11,7 @@ const Homepage = () => {
       {/* title */}
       <div className='flex flex-col gap-8'>
         <p className='text-5xl w-4/5 leading-snug font-medium'>
-          Clean, minimalist.
+          Clean, minimalist. <br />
           Sometimes, simplicity is the most useful tool.
         </p>
         <p className='text-base font-medium'>Alvin Al - Web Developer</p>

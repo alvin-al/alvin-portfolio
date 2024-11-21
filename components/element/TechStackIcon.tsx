@@ -6,7 +6,7 @@ import { SiTypescript } from "react-icons/si";
 
 const TechStackIcon = () => {
   return (
-    <div className='w-fit h-fit flex gap-8 text-gray-800'>
+    <div className='w-fit h-fit grid grid-flow-col grid-rows-2 md:grid-rows-1 gap-8 text-gray-800'>
       <FaReact size='2em' />
       <RiNextjsLine size='2em' />
       <RiTailwindCssFill size='2em' />

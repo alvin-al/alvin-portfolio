@@ -13,7 +13,7 @@ export default function Work() {
   return (
     <div id='work'>
       <SubHeader>Work</SubHeader>
-      <p className='text-left text-white text-base pt-4 pb-10 lg:pl-[55%]  xl:pl-[60%] xl:text-lg'>
+      <p className='text-left text-white text-base pt-4 pb-10 lg:pl-[55%] xl:pl-[60%] xl:text-lg'>
         {p}
       </p>
       <div id='all-works' className='flex flex-col xl:flex-row gap-8'>
@@ -22,6 +22,7 @@ export default function Work() {
             src={project.mainImage}
             title={project.title}
             link={project.websiteLink}
+            titleDescription={project.titleDescription}
             key={project.id}
           />
         ))}

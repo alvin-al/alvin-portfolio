@@ -1,10 +1,13 @@
 import React from "react";
 import client from "@/utils/contentfulClient";
+import Projects from "@/components/pages/Projects";
 
 const page = () => {
-console.log(client)
-
-  return <div>page</div>;
+  return (
+    <div>
+      <Projects />
+    </div>
+  );
 };
 
 export default page;

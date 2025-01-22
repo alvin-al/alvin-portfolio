@@ -6,9 +6,10 @@ interface WorkPicturesProps {
   src: string;
   title: string;
   link: string;
+  titledesc: string;
 }
 
-function WorkPictures({ src, title, link }: WorkPicturesProps) {
+function WorkPictures({ src, title, link, titledesc }: WorkPicturesProps) {
   return (
     <Link href={`${link}`}>
       <div className='flex flex-col gap-2 lg:gap-4 rounded-md h-full w-full'>
@@ -22,12 +23,10 @@ function WorkPictures({ src, title, link }: WorkPicturesProps) {
           />
         </div>
         <div>
-          <p className='text-lg font-medium text-gray-500 mb:1 lg:mb-2'>
+          <p className='text-lg font-medium text-gray-500 mb-1 lg:mb-2'>
             {title}
           </p>
-          <p className='text-3xl font-medium text-gray-800'>
-            Website untuk {title}
-          </p>
+          <p className='text-3xl font-medium text-gray-800'>{titledesc}</p>
         </div>
       </div>
     </Link>

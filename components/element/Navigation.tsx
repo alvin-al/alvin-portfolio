@@ -8,8 +8,8 @@ const syne = Syne({
 });
 
 const itemMenu = [
-  { title: "Home", link: "/alt" },
-  { title: "Project", link: "/" },
+  { title: "Home", link: "/" },
+  { title: "Projects", link: "/projects" },
   { title: "About", link: "/" },
 ];
 

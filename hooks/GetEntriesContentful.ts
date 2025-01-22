@@ -6,7 +6,8 @@ interface Project {
   title: string;
   slug: string;
   id: string;
-  websiteLink : string;
+  websiteLink: string;
+  titleDescription: string;
 }
 
 export default function GetEntriesContentful() {
@@ -22,6 +23,7 @@ export default function GetEntriesContentful() {
           slug: item.fields.slug,
           id: item.sys.id,
           websiteLink: item.fields.websiteLink,
+          titleDescription: item.fields.titleDescription,
         }));
         setEntries(mappedEntries);
       })

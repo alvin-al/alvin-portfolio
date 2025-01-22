@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SplitTextLine from "../ui/SplitTextLine";
 
+
 const Navbar = () => {
   return (
     <div id='navbar' className='pr-48 md:pr-[500px] lg:pr-[75%] w-full'>

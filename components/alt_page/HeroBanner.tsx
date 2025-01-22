@@ -1,5 +1,6 @@
 import React from "react";
 import RoundedButton from "../element/RoundedButton";
+import Link from "next/link";
 
 const HeroBanner = () => {
   return (
@@ -13,7 +14,9 @@ const HeroBanner = () => {
         <p className='text-lg font-medium'>Alvin Al - Web Developer</p>
       </div>
       <div>
-        <RoundedButton>Contact me</RoundedButton>
+        <Link href='#contact'>
+          <RoundedButton>Contact me</RoundedButton>
+        </Link>
       </div>
     </div>
   );

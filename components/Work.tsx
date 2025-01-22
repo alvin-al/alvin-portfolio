@@ -11,7 +11,7 @@ export default function Work() {
     "As a web developer, I create websites that facilitate communication between businesses and their customers or clients. Websites are powerful tools that can enhance brand awareness, generate leads, and increase conversions. I use the latest technologies and best practices to design and develop websites that are user-friendly and responsive.";
 
   return (
-    <div id='work'>
+    <div>
       <SubHeader>Work</SubHeader>
       <p className='text-left text-white text-base pt-4 pb-10 lg:pl-[55%] xl:pl-[60%] xl:text-lg'>
         {p}
@@ -22,7 +22,7 @@ export default function Work() {
             src={project.mainImage}
             title={project.title}
             link={project.websiteLink}
-            titleDescription={project.titleDescription}
+            titledesc={project.titleDescription}
             key={project.id}
           />
         ))}

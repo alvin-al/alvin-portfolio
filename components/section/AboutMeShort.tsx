@@ -3,7 +3,10 @@ import TechStackIcon from "../element/TechStackIcon";
 
 const AboutMeShort = () => {
   return (
-    <div className='flex flex-col lg:flex-row w-full gap-8'>
+    <div
+      className='flex flex-col lg:flex-row w-full gap-8 scroll-mt-48'
+      id='about'
+    >
       <div className='text-lg font-medium text-gray-500 lg:w-1/5 xl:w-1/5'>
         About me
       </div>

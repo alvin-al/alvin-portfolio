@@ -8,9 +8,9 @@ const syne = Syne({
 });
 
 const itemMenu = [
-  { title: "Home", link: "/" },
-  { title: "Projects", link: "/projects" },
-  { title: "About", link: "/" },
+  { title: "About", link: "#about" },
+  { title: "Project", link: "#project" },
+  { title: "Contact", link: "#contact" },
 ];
 
 const Navigation = () => {
@@ -20,7 +20,6 @@ const Navigation = () => {
   React.useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
       // Jika scroll ke bawah dan lebih dari 50px, sembunyikan
       if (currentScrollY > lastScrollY && currentScrollY > 50) {
         setIsVisible(false);
@@ -29,11 +28,9 @@ const Navigation = () => {
       else if (currentScrollY < lastScrollY) {
         setIsVisible(true);
       }
-
       // Update posisi scroll terakhir
       setLastScrollY(currentScrollY);
     };
-
     // Tambahkan event listener
     window.addEventListener("scroll", handleScroll);
 

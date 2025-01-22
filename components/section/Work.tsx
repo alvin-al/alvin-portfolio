@@ -7,7 +7,7 @@ export default function Work() {
   const projects = GetEntriesContentful();
 
   return (
-    <div id='work'>
+    <div id='project' className='scroll-mt-16'>
       <div id='all-works' className='grid lg:grid-cols-3 gap-12 xl:py-32'>
         {projects.map((project) => (
           <WorkPictures

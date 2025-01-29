@@ -71,3 +71,17 @@ body {
     --radius: 0.5rem;
   }
 }
+
+.zoom-image {
+  transform: scale(1);
+  opacity: 80%;
+  will-change: transform;
+}
+.zoom-image.zoomed {
+  opacity: 100%;
+  transform: scale(1.5);
+}
+
+.hide-cursor {
+  cursor: none;
+}

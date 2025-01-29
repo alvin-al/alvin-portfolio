@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import Project from "@/components/pages/Project";
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <>
+      <Project />
+    </>
+  );
+};
 
-export default page
+export default page;

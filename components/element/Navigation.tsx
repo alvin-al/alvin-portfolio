@@ -2,6 +2,7 @@
 import React from "react";
 import { Syne } from "next/font/google";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -14,6 +15,8 @@ const itemMenu = [
 ];
 
 const Navigation = () => {
+  const path = usePathname();
+
   const [isVisible, setIsVisible] = React.useState(true);
   const [lastScrollY, setLastScrollY] = React.useState(0);
 
@@ -52,15 +55,19 @@ const Navigation = () => {
           AL
         </p>
       </Link>
-      <div className='w-full'>
-        <ul className='hidden md:flex gap-8 text-base 2xl:text-lg font-medium justify-center'>
-          {itemMenu.map((item, index) => (
-            <li className='hover:text-gray-500' key={index}>
-              <Link href={item.link}>{item.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {path == "/" ? (
+        <div className='w-full'>
+          <ul className='hidden md:flex gap-8 text-base 2xl:text-lg font-medium justify-center'>
+            {itemMenu.map((item, index) => (
+              <li className='hover:text-gray-500' key={index}>
+                <Link href={item.link}>{item.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <></>
+      )}
       <div className='w-[82.5px] h-full '></div>
     </div>
   );

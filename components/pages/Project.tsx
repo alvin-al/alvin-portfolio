@@ -71,7 +71,7 @@ const Project = () => {
           1.10.33 of &quot;de Finibus Bonorum et Malorum&quot; (The Extremes of Good and
           Evil) by Cicero, written in 45 BC. This book is a treatise on the
           theory of ethics, very popular during the Renaissance. The first line
-          of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+          of Lorem Ipsum, &quot;Lorem ipsum dolor sit amet..&quot;, comes from a line in
           section 1.10.32.
         </p>
       </div>

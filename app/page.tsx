@@ -1,4 +1,4 @@
-import Work from "@/components/section/Work";
+// import Work from "@/components/section/Work";
 import HeroBanner from "@/components/alt_page/HeroBanner";
 import React from "react";
 import AboutMeShort from "@/components/section/AboutMeShort";

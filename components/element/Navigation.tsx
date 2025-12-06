@@ -11,6 +11,7 @@ const syne = Syne({
 const itemMenu = [
   { title: "About", link: "#about" },
   { title: "Project", link: "#project" },
+  { title: "Blog", link: "#blog" },
   { title: "Contact", link: "#contact" },
 ];
 

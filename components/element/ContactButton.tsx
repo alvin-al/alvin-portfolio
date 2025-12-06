@@ -30,7 +30,7 @@ const ContactButton = () => {
           {contactList.map((item, index) => (
             <li key={index}>
               <Link href={item.href}>
-                <button className='hover:bg-slate-700 border text-gray-800 hover:text-[#f8f0e5] border-gray-800 w-12 h-12 rounded-full flex justify-center items-center'>
+                <button className='hover:bg-slate-700 border text-gray-800 hover:text-[#f8f0e5] border-gray-800 w-12 h-12 rounded-full flex justify-center items-center transition duration-200'>
                   {item.icon}
                 </button>
               </Link>

@@ -3,7 +3,9 @@ import { FaReact, FaFigma } from "react-icons/fa";
 import { RiNextjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiTypescript } from "react-icons/si";
-import { FaWordpress } from "react-icons/fa";
+import { FaWordpress, FaNodeJs } from "react-icons/fa";
+import { SiPrisma } from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 const TechStackIcon = () => {
   return (
@@ -27,6 +29,18 @@ const TechStackIcon = () => {
       />
       <FaFigma size='2em' className='hover:scale-125 transition duration-200' />
       <FaWordpress
+        size='2em'
+        className='hover:scale-125 transition duration-200'
+      />
+      <FaNodeJs
+        size='2em'
+        className='hover:scale-125 transition duration-200'
+      />
+      <SiPrisma
+        size='2em'
+        className='hover:scale-125 transition duration-200'
+      />
+      <BiLogoPostgresql
         size='2em'
         className='hover:scale-125 transition duration-200'
       />

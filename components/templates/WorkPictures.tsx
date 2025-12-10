@@ -7,16 +7,9 @@ interface WorkPicturesProps {
   title: string;
   link: string;
   titledesc: string;
-  bgColor: string;
 }
 
-function WorkPictures({
-  src,
-  title,
-  link,
-  titledesc,
-  bgColor,
-}: WorkPicturesProps) {
+function WorkPictures({ src, title, link, titledesc }: WorkPicturesProps) {
   return (
     <Link href={`${link}`}>
       <div className='group flex flex-col gap-2 lg:gap-4 rounded-md h-full w-full'>

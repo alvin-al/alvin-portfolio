@@ -22,7 +22,7 @@ function WorkPictures({
       <div className='flex flex-col gap-2 lg:gap-4 rounded-md h-full w-full'>
         <div
           className={`w-full h-full cursor-pointer rounded-2xl hover:shadow-lg hover:duration-300 transition ease-in-out overflow-hidden relative justify-center flex items-center `}
-          style={{ backgroundColor: "#FFD6BA" }}
+          style={{ backgroundColor: "#B6CEB4" }}
         >
           <Image
             src={src}

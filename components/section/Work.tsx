@@ -8,6 +8,7 @@ export default function Work() {
 
   return (
     <div id='project' className='scroll-mt-16'>
+      <h2 className='sr-only'>Projects</h2>
       <div id='all-works' className='grid lg:grid-cols-3 gap-12 xl:py-32'>
         {projects.map((project) => {
           return (

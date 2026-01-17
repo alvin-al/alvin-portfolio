@@ -19,7 +19,7 @@ function WorkPictures({ src, title, link, titledesc }: WorkPicturesProps) {
         >
           <Image
             src={src}
-            alt='title'
+            alt={title}
             width={800}
             height={800}
             className='object-cover scale-90 transition ease-in-out duration-300 rounded-sm'

@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Navigation from "@/components/element/Navigation";
 import Script from "next/script";
+import { jsonLd } from "./json-ld";
 
 const PlusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -11,8 +12,48 @@ const PlusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "Alvin Al - Portfolio Web",
+  metadataBase: new URL("https://alvinxal.my.id"), // Ganti dengan domain asli
+  title: {
+    default: "Alvin Al - Web Developer Portfolio",
+    template: "%s | Alvin Al",
+  },
+  description:
+    "Portfolio of Alvin Al, a Web Developer specializing in Next.js, React, and minimalist design. View my projects and contact me.",
+  keywords: [
+    "Alvin Al",
+    "alvinxal",
+    "Alvin Al Temanggung",
+    "Web Developer Indonesia",
+    "Frontend Developer",
+    "Next.js Developer",
+    "React Developer",
+    "Portfolio",
+    "Minimalist Web Design",
+    "Web Developer Temanggung",
+    "Tailwind CSS",
+    "TypeScript Developer",
+  ],
+  openGraph: {
+    title: "Alvin Al - Web Developer Portfolio",
+    description:
+      "Explore the portfolio of Alvin Al, featuring minimalist and effective web development projects.",
+    url: "https://alvinxal.my.id",
+    siteName: "Alvin Al Portfolio",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alvin Al - Web Developer Portfolio",
+    description:
+      "Explore the portfolio of Alvin Al, featuring minimalist and effective web development projects.",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  alternates: {
+    canonical: "https://alvinxal.my.id",
+  },
 };
 
 export default function RootLayout({
@@ -30,6 +71,11 @@ export default function RootLayout({
         <Script
           src='https://www.googletagmanager.com/gtag/js?id=G-N7V1X7SS9B'
           strategy='afterInteractive'
+        />
+        <Script
+          id='json-ld'
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Script id='google-analytics' strategy='afterInteractive'>
           {`

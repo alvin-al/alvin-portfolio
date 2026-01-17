@@ -7,9 +7,9 @@ const Contact = () => {
       className=' flex flex-col lg:flex-row w-full gap-8 py-24 scroll-mt-20'
       id='contact'
     >
-      <div className='text-lg font-medium text-gray-500 lg:w-1/5 xl:w-1/5'>
+      <h2 className='text-lg font-medium text-gray-500 lg:w-1/5 xl:w-1/5'>
         Contact
-      </div>
+      </h2>
       <div className='lg:w-4/5 xl:w-3/5 flex flex-col gap-12'>
         <p className='leading-relaxed text-2xl lg:leading-normal lg:text-3xl font-medium text-gray-800'>
           Interested in collaborating together? You can contact me on the links

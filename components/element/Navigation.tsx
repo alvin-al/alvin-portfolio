@@ -9,10 +9,10 @@ const syne = Syne({
 });
 
 const itemMenu = [
-  { title: "About", link: "#about" },
-  { title: "Project", link: "#project" },
-  { title: "Blog", link: "#blog" },
-  { title: "Contact", link: "#contact" },
+  { title: "About", link: "/#about" },
+  { title: "Project", link: "/#project" },
+  { title: "Blog", link: "/blog" },
+  { title: "Contact", link: "/#contact" },
 ];
 
 const Navigation = () => {
@@ -56,7 +56,7 @@ const Navigation = () => {
           AL
         </p>
       </Link>
-      {path == "/" ? (
+      {!path.startsWith("/dashboard") && (path == "/" || path == "/blog") ? (
         <div className='w-full'>
           <ul className='hidden md:flex gap-8 text-base 2xl:text-lg font-medium justify-center'>
             {itemMenu.map((item, index) => (

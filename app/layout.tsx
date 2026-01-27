@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import Navigation from "@/components/element/Navigation";
+
 import Script from "next/script";
 import { jsonLd } from "./json-ld";
+
 
 const PlusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -62,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' className='scroll-smooth'>
+    <html lang='en'>
       <head>
         <link rel='icon' href='/favicon.ico' sizes='any' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -87,9 +88,8 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${PlusJakarta.className} antialiased scroll-smooth`}>
-        <Navigation />
-        <main>{children}</main>
-        <Analytics />
+            <main>{children}</main>
+          <Analytics />
       </body>
     </html>
   );

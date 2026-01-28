@@ -2,10 +2,10 @@
 import React from "react";
 import WorkPictures from "./templates/WorkPictures";
 import SubHeader from "./ui/SubHeader";
-import GetEntriesContentful from "@/hooks/GetEntriesContentful";
+import GetSanityProjects from "@/hooks/GetSanityProjects";
 
 export default function Work() {
-  const projects = GetEntriesContentful();
+  const projects = GetSanityProjects();
 
   const p =
     "As a web developer, I create websites that facilitate communication between businesses and their customers or clients. Websites are powerful tools that can enhance brand awareness, generate leads, and increase conversions. I use the latest technologies and best practices to design and develop websites that are user-friendly and responsive.";
@@ -21,7 +21,7 @@ export default function Work() {
           <WorkPictures
             src={project.mainImage}
             title={project.title}
-            link={project.websiteLink}
+            slug={project.slug}
             titledesc={project.titleDescription}
             key={project.id}
           />

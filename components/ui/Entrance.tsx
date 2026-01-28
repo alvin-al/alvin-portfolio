@@ -1,0 +1,32 @@
+"use client";
+
+import { motion } from "motion/react";
+import React from "react";
+
+interface EntranceProps {
+  children: React.ReactNode;
+  delay?: number;
+  duration?: number;
+  className?: string;
+  yOffset?: number;
+}
+
+export default function Entrance({
+  children,
+  delay = 0,
+  duration = 0.5,
+  className = "",
+  yOffset = 50,
+}: EntranceProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: yOffset }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: duration, delay: delay, ease: "easeOut" }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}

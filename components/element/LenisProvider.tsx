@@ -1,6 +1,22 @@
 "use client";
 
-import { ReactLenis } from "lenis/react";
+import { ReactLenis, useLenis } from "lenis/react";
+import { usePathname } from "next/navigation";
+import { useEffect } from "react";
+
+function ScrollReset() {
+  const pathname = usePathname();
+  const lenis = useLenis();
+
+  useEffect(() => {
+    // Reset scroll to top when route changes
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    }
+  }, [pathname, lenis]);
+
+  return null;
+}
 
 export default function LenisProvider({ children }: { children: React.ReactNode }) {
   return (
@@ -14,6 +30,7 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
         touchMultiplier: 2,
       }}
     >
+      <ScrollReset />
       {children}
     </ReactLenis>
   );

@@ -1,25 +1,34 @@
 import React from "react";
-import urbia from "@/public/works/urbiaid.jpeg";
-import Image from "next/image";
-import ViewCursor from "../ViewCursor";
+import ImageZoom from "@/components/ui/ImageZoom";
+// import ViewCursor from "../ViewCursor";
+import { motion } from "motion/react";
 
-const ProjectMainImage = () => {
+interface ProjectMainImageProps {
+  src: string;
+  title: string;
+}
+
+const ProjectMainImage = ({ src, title }: ProjectMainImageProps) => {
+  if (!src) return null;
+  
   return (
-    <div>
-      <div className='w-full h-full mb-6 lg:mb-12'>
-        <ViewCursor>
-          <Image
-            className={`rounded-md w-full
-          }`}
-            src={urbia}
-            width='1000'
-            height='1000'
-            alt='work'
-            priority
-          />
-        </ViewCursor>
+    <motion.div 
+      initial={{ opacity: 0, scale: 0.95, y: 50 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
+      className='w-full'
+    >
+      <div className="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden rounded-xl">
+        <ImageZoom
+          src={src}
+          alt={title}
+          className="w-full h-full"
+          imageClassName="object-cover"
+          priority
+        />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

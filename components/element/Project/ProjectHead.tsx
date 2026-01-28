@@ -1,28 +1,113 @@
+  "use client";
 import React from "react";
 import RoundedItem from "@/components/element/RoundedItem";
+import { Syne, Plus_Jakarta_Sans } from "next/font/google"; // Import both fonts
+import SplitTextUp from "@/components/ui/SplitTextUp"; // Import Animation
+import { motion } from "motion/react";
+import ProjectMainImage from "./ProjectMainImage";
 
-const ArticleHead = () => {
+const syne = Syne({
+  subsets: ["latin"],
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+});
+
+interface ProjectHeadProps {
+  title: string;
+  description: string;
+  date?: string;
+  techStack?: string[];
+  websiteLink?: string; 
+  imageUrl?: string;
+  imageAlt?: string;
+}
+
+const ProjectHead = ({ title, description, date, techStack, websiteLink, imageUrl, imageAlt }: ProjectHeadProps) => {
   return (
-    <div>
-      <div className='flex flex-col my-12'>
-        <div className='flex flex-col gap-2'>
-          <p className='text-base font-medium text-gray-500'>January 2024</p>
-          <p className='text-5xl xl:text-[60px] w-full xl:w-4/5 leading-snug font-semibold text-gray-900'>
-            Web Showcase for Urbia Project
-          </p>
-          <p className='text-lg font-medium text-gray-900'>
-            Urbia Studio - Yogyakarta
-          </p>
-        </div>
-        <div className='mt-4 grid grid-flow-col gap-2 w-fit'>
-          <RoundedItem>Tailwind</RoundedItem>
-          <RoundedItem>NextJS</RoundedItem>
-          <RoundedItem>Shadcn</RoundedItem>
-          <RoundedItem>React</RoundedItem>
+    <div className='flex flex-col mt-0 lg:mt-4'>
+      {/* Title Section */}
+      <div className='flex flex-col gap-6 mb-8'>
+        <div className={`${plusJakarta.className} font-extrabold text-5xl md:text-7xl lg:text-8xl text-gray-900  mb break-normal py-auto`}>
+           <SplitTextUp className="leading-tight">{title}</SplitTextUp>
         </div>
       </div>
+
+       {/* Main Image */}
+       {imageUrl && (
+          <div className="mb-6 lg:mb-8">
+            <ProjectMainImage src={imageUrl} title={imageAlt || title} />
+          </div>
+       )}
+
+      {/* Metadata Grid */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+        className='grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-4 pt-0'
+      >
+        {/* Description */}
+        <div className="col-span-1 md:col-span-1 order-1 pt-0">
+           <p className={`text-lg md:text-xl font-medium text-gray-900 leading-relaxed ${plusJakarta.className}`}>
+             {description}
+           </p>
+        </div>
+
+        <div className="flex flex-col gap-2 col-span-1 order-2">
+           <span className="text-gray-400 uppercase text-sm font-semibold tracking-wider">Date</span>
+           <span className="text-gray-900 text-lg font-medium">{date || "N/A"}</span>
+        </div>
+         
+        <div className="flex flex-col gap-2 col-span-1 order-3">
+           <span className="text-gray-400 uppercase text-sm font-semibold tracking-wider">Tech Stack</span>
+           <div className='flex flex-wrap gap-2'>
+            {techStack && techStack.length > 0 ? (
+              techStack.map((tech) => (
+                <RoundedItem key={tech}>{tech}</RoundedItem>
+              ))
+            ) : (
+              <span>-</span>
+            )}
+          </div>
+        </div>
+
+        {websiteLink && (
+          <div className="flex flex-col gap-2 items-start col-span-1 order-4">
+            <span className="text-gray-400 uppercase text-sm font-semibold tracking-wider">Link</span>
+            <a 
+              href={websiteLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group flex items-center gap-2 text-gray-900 border-b border-gray-900 pb-0.5 mt-0 hover:text-gray-600 hover:border-gray-600 transition-all font-medium text-lg leading-tight"
+            >
+              View Live Site
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                fill="none" 
+                viewBox="0 0 24 24" 
+                strokeWidth={2} 
+                stroke="currentColor" 
+                className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
+          </div>
+        )}
+      </motion.div>
+
+      {/* Divider */}
+      <motion.div 
+         initial={{ scaleX: 0 }}
+         animate={{ scaleX: 1 }}
+         transition={{ delay: 0.8, duration: 1, ease: "circOut" }}
+         className="w-full h-[1px] bg-gray-300 mt-12 mb-4 origin-left"
+      />
     </div>
   );
 };
 
-export default ArticleHead;
+export default ProjectHead;

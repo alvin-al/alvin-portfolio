@@ -87,7 +87,7 @@ export default function RootLayout({
   `}
         </Script>
       </head>
-      <body className={`${PlusJakarta.className} antialiased scroll-smooth`}>
+      <body className={`${PlusJakarta.className} antialiased scroll-smooth overflow-x-hidden`}>
             <main>{children}</main>
           <Analytics />
       </body>

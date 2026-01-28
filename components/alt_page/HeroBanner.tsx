@@ -37,7 +37,7 @@ const HeroBanner = () => {
       variants={containerVariants}
       initial='hidden'
       animate={!isLoading ? "visible" : "hidden"}
-      className='mt-12 md:pt-4 lg:pt-0 lg:h-screen lg:justify-center flex flex-col gap-16 2xl:gap-24'
+      className='h-svh flex flex-col justify-center gap-16 md:pt-4 lg:pt-0 lg:h-screen lg:justify-center 2xl:gap-24'
     >
       {/* title */}
       <div className='flex flex-col gap-8'>

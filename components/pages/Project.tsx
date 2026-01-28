@@ -16,13 +16,13 @@ const Project = () => {
   return (
     <div className='px-8 md:px-64 flex flex-col mb-20'>
       {/* Title */}
-      <ProjectHead />
+      <ProjectHead title="Example Project" description="This is an example project description." />
       {/* Image */}
-      <ProjectMainImage />
+      {/* <ProjectMainImage src="" title="Example" /> */}
       {/* Text */}
       <ProjectText />
       {/* View site button */}
-      <ProjectViewButton />
+      <ProjectViewButton link="#" />
     </div>
   );
 };

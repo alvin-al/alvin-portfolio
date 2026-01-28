@@ -1,18 +1,18 @@
+"use client";
 import React from "react";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { PortableText, PortableTextBlock, PortableTextComponents } from "next-sanity";
-import Image from "next/image";
-import { urlFor } from "@/hooks/GetSanityProjectBySlug";
+import { urlFor } from "@/hooks/GetSanityPostBySlug"; // Adjusted hook
 import { getVideoEmbedUrl } from "@/utils/videoUtils";
 import ImageZoom from "@/components/ui/ImageZoom";
 
 const plusJakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
-interface ProjectTextProps {
+interface BlogTextProps {
   content?: PortableTextBlock[];
 }
 
-// Custom components for PortableText to render Sanity styling
+// Custom components for PortableText to render Sanity styling (Reused from ProjectText)
 const components: PortableTextComponents = {
   block: {
     // Headings
@@ -97,13 +97,12 @@ const components: PortableTextComponents = {
     },
   },
   types: {
-
     // Image type
     image: ({ value }) => {
       if (!value?.asset) return null;
       
       const imageUrl = urlFor(value.asset).width(1200).quality(90).url();
-      const alt = value.alt || "Project image";
+      const alt = value.alt || "Blog image";
       const caption = value.caption;
 
       return (
@@ -156,7 +155,7 @@ const components: PortableTextComponents = {
   },
 };
 
-const ProjectText = ({ content }: ProjectTextProps) => {
+const BlogText = ({ content }: BlogTextProps) => {
   if (!content) return null;
 
   return (
@@ -166,4 +165,4 @@ const ProjectText = ({ content }: ProjectTextProps) => {
   );
 };
 
-export default ProjectText;
+export default BlogText;

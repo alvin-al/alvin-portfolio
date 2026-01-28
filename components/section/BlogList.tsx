@@ -16,38 +16,63 @@ export default function BlogList() {
   };
 
   return (
-    <div
-      className="flex flex-col lg:flex-row w-full gap-8 py-24 scroll-mt-20"
-      id="blog"
-    >
-      <div className="text-lg font-medium text-gray-500 lg:w-1/5 xl:w-1/5 sticky top-24">
+    <div className="flex flex-col lg:flex-row w-full gap-8" id="blog">
+      <div className="hidden lg:block text-lg font-medium text-gray-500 lg:w-1/5 xl:w-1/5 lg:sticky lg:top-24 lg:self-start">
         Write by me
       </div>
-      <div className="lg:w-4/5 xl:w-3/5 flex flex-col">
+      <div className="lg:w-4/5 xl:w-4/5">
         {blogPosts.length === 0 ? (
-          <p className="text-gray-500">No blog posts yet.</p>
+          <p className="text-gray-500 text-center py-20">No blog posts yet.</p>
         ) : (
-          blogPosts.map((post) => (
-            <Link
-              href={`/blog/${post.slug}`}
-              key={post.id}
-              className="group"
-            >
-              <p className="text-gray-500 font-semibold text-sm mb-2 md:mb-0 group-hover:text-gray-700 transition-colors">
-                {formatDate(post.date)}
-              </p>
-              <p className="leading-relaxed text-2xl lg:leading-normal lg:text-3xl font-medium text-gray-800 flex flex-col group-hover:text-gray-900 transition-colors">
-                {post.title}
-                <span className="text-lg font-medium text-gray-500 mt-2">
-                  {post.excerpt}
-                </span>
-              </p>
-              <hr className="border-t border w-full border-gray-400 mt-8 last:hidden" />
-            </Link>
-          ))
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {blogPosts.map((post) => (
+              <Link
+                href={`/blog/${post.slug}`}
+                key={post.id}
+                className="group flex flex-col h-full"
+              >
+                <article className="flex flex-col h-full p-6 rounded-2xl border border-gray-400 hover:border-gray-900 hover:bg-gray-900 transition-all duration-300 ease-out relative overflow-hidden group-hover:shadow-2xl">
+                  
+                  {/* Date Badge */}
+                  <div className="mb-4">
+                    <span className="text-xs font-bold tracking-widest uppercase text-gray-500 group-hover:text-gray-400 transition-colors">
+                      {formatDate(post.date)}
+                    </span>
+                  </div>
+
+                  {/* Title */}
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-white transition-colors">
+                    {post.title}
+                  </h2>
+
+                  {/* Excerpt */}
+                  <p className="text-base text-gray-600 leading-relaxed mb-8 line-clamp-3 flex-grow group-hover:text-gray-300 transition-colors">
+                    {post.excerpt}
+                  </p>
+
+                  {/* Read More Action */}
+                  <div className="flex items-center text-sm font-bold text-gray-900 mt-auto group-hover:text-white transition-colors">
+                    <span className="relative">
+                      Read Article
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 group-hover:bg-white transition-all group-hover:w-full duration-300"></span>
+                    </span>
+                    <svg 
+                      xmlns="http://www.w3.org/2000/svg" 
+                      fill="none" 
+                      viewBox="0 0 24 24" 
+                      strokeWidth={2} 
+                      stroke="currentColor" 
+                      className="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                    </svg>
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
         )}
       </div>
-      <div className="hidden xl:flex lg:w-1/5"></div>
     </div>
   );
 }

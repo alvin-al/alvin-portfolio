@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const ViewCursor = ({ children }: { children: React.ReactNode }) => {
+const ViewCursor = ({ children, className = "w-fit h-fit" }: { children: React.ReactNode; className?: string }) => {
   const elementRef = useRef<HTMLDivElement>(null);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [visible, setVisible] = useState(false);
@@ -30,7 +30,7 @@ const ViewCursor = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return (
-    <div ref={elementRef} className='relative w-fit h-fit hide-cursor'>
+    <div ref={elementRef} className={`relative hide-cursor ${className}`}>
       {children}
       {visible && (
         <div

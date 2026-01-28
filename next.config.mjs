@@ -15,6 +15,10 @@ const nextConfig = {
         protocol: "http",
         hostname: "images.ctfassets.net",
       },
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+      },
     ],
   },
 };

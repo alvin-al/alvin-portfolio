@@ -1,5 +1,4 @@
-import { Document } from "@contentful/rich-text-types";
-
+// Project type for Sanity
 export type ProjectContentType = {
   title: string;
   titleDescription: string;
@@ -7,11 +6,11 @@ export type ProjectContentType = {
   techStack?: string[];
   websiteLink: string;
   mainImage: {
-    sys: {
-      id: string;
-      type: "Link";
-      linkType: "Asset";
+    asset: {
+      _ref: string;
+      _type: "reference";
     };
+    alt?: string;
   };
-  projectContent: Document;
+  projectContent: any; // Can be replaced with a more specific type for Sanity block content
 };

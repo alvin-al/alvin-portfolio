@@ -29,9 +29,9 @@ const contactList = [
 const HomeFooter = () => {
   return (
     <div className='relative w-full border-t border-gray-300 py-8 px-6 md:px-8 lg:px-20'>
-      <div className='flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8'>
+      <div className='flex flex-col lg:flex-row justify-between items-center gap-8'>
         
-        <div className='flex flex-col gap-2'>
+        <div className='flex flex-col gap-2 text-center lg:text-left'>
           <p className='text-gray-800 font-medium'>Temanggung, Indonesia</p>
           <p className='text-gray-500 text-sm'>© Alvin Al - 2026</p>
         </div>

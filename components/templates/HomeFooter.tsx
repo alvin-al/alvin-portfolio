@@ -28,7 +28,7 @@ const contactList = [
 
 const HomeFooter = () => {
   return (
-    <div className='relative w-full border-t border-gray-300 pt-12 pb-8 px-6 md:px-8 lg:px-20'>
+    <div className='relative w-full border-t border-gray-300 py-8 px-6 md:px-8 lg:px-20'>
       <div className='flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8'>
         
         <div className='flex flex-col gap-2'>

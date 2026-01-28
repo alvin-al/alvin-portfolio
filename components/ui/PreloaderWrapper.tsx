@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "motion/react";
 import Preloader from "@/components/ui/Preloader";
 import { useLoading } from "@/components/context/LoadingContext";
 

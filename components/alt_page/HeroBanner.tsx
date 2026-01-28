@@ -3,7 +3,7 @@
 import React from "react";
 import RoundedButton from "../element/RoundedButton";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useLoading } from "../context/LoadingContext";
 
 const HeroBanner = () => {

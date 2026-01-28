@@ -1,12 +1,8 @@
 "use client";
 
-import { ReactLenis } from "@studio-freight/react-lenis";
+import { ReactLenis } from "lenis/react";
 
-export default function LenisProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function LenisProvider({ children }: { children: React.ReactNode }) {
   return (
     <ReactLenis
       root

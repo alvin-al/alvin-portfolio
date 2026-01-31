@@ -36,9 +36,9 @@ const SplitTextUp: React.FC<SplitTextUpProps> = ({
       ref={textRef}
       className={`${className} flex overflow-hidden flex-wrap`}
     >
-      {children.split("").map((letter, index) => (
-        <span key={index} className='inline-block'>
-          {letter === " " ? "\u00A0" : letter}
+      {children.split(" ").map((word, index) => (
+        <span key={index} className='inline-block' style={{ marginRight: '0.25em' }}>
+          {word}
         </span>
       ))}
     </div>

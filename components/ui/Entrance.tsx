@@ -25,6 +25,7 @@ export default function Entrance({
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: duration, delay: delay, ease: "easeOut" }}
       className={className}
+      style={{ display: 'block', width: '100%' }}
     >
       {children}
     </motion.div>

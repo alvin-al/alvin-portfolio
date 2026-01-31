@@ -17,22 +17,98 @@ interface ProjectTextProps {
   content?: PortableTextBlock[];
 }
 
+const ProjectImage = ({ value }: { value: any }) => {
+  const [dimensions, setDimensions] = React.useState<{ width: number; height: number } | null>(null);
+
+  if (!value?.asset) return null;
+
+  const imageUrl = urlFor(value.asset).width(1200).quality(90).url();
+  const alt = value.alt || "Project image";
+  const caption = value.caption;
+
+  React.useEffect(() => {
+    const img = new window.Image();
+    img.src = imageUrl;
+    img.onload = () => {
+      setDimensions({ width: img.naturalWidth, height: img.naturalHeight });
+    };
+  }, [imageUrl]);
+
+  const getStyles = () => {
+    if (!dimensions) {
+      return {
+        containerClass: "w-full aspect-video rounded-lg overflow-hidden bg-gray-100 mb-4",
+        imageClass: "object-cover",
+        style: {} as React.CSSProperties
+      }
+    }
+
+    const { width, height } = dimensions;
+    const isPortrait = height > width * 1.3;
+    const isLandscape = width > height; 
+    
+    // Auto-calculate aspect ratio to ensure layout stability
+    const style: React.CSSProperties = { aspectRatio: `${width} / ${height}` };
+
+    if (isPortrait) {
+      return {
+        containerClass: "max-w-sm mx-auto shadow-md md:max-w-xs rounded-lg mb-4 overflow-hidden bg-gray-100",
+        imageClass: "object-cover",
+        style
+      };
+    } else if (isLandscape) {
+      return {
+        containerClass: "w-full max-h-[500px] md:max-h-[50vh] rounded-lg mb-4 overflow-hidden",
+        imageClass: "object-contain",
+        style
+      };
+    } else {
+      // Default
+      return {
+        containerClass: "max-w-full mb-4 rounded-lg overflow-hidden",
+        imageClass: "object-contain",
+        style
+      };
+    }
+  };
+
+  const { containerClass, imageClass, style } = getStyles();
+
+  return (
+    <figure className="mb-12">
+      <div className={`relative ${containerClass}`} style={style}>
+        <ImageZoom
+          src={imageUrl}
+          alt={alt}
+          className="w-full h-full"
+          imageClassName={`${imageClass} w-full h-full`}
+        />
+      </div>
+      {caption && (
+        <figcaption className={`mt-4 text-center text-sm md:text-base text-gray-500 font-medium tracking-tight ${plusJakarta.className}`}>
+          {caption}
+        </figcaption>
+      )}
+    </figure>
+  );
+};
+
 // Custom components for PortableText to render Sanity styling
 const components: PortableTextComponents = {
   block: {
     // Headings
     h1: ({ children }) => (
-      <h1 className={`text-4xl md:text-5xl font-bold text-gray-900 mt-12 mb-6 leading-tight ${plusJakarta.className}`}>
+      <h1 className={`text-4xl md:text-5xl font-bold text-gray-900 mt-12 mb-6 leading-tight text-balance tracking-tight break-normal hyphens-manual ${plusJakarta.className}`}>
         {children}
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 className={`text-3xl md:text-4xl font-bold text-gray-900 mt-10 mb-5 leading-tight ${plusJakarta.className}`}>
+      <h2 className={`text-3xl md:text-4xl font-bold text-gray-900 mt-10 mb-5 leading-tight text-balance tracking-tight break-normal hyphens-manual ${plusJakarta.className}`}>
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className={`text-2xl md:text-3xl font-semibold text-gray-900 mt-8 mb-4 leading-tight ${plusJakarta.className}`}>
+      <h3 className={`text-2xl md:text-3xl font-semibold text-gray-900 mt-8 mb-4 leading-tight text-balance tracking-tight break-normal hyphens-manual ${plusJakarta.className}`}>
         {children}
       </h3>
     ),
@@ -104,31 +180,7 @@ const components: PortableTextComponents = {
   types: {
 
     // Image type
-    image: ({ value }) => {
-      if (!value?.asset) return null;
-      
-      const imageUrl = urlFor(value.asset).width(1200).quality(90).url();
-      const alt = value.alt || "Project image";
-      const caption = value.caption;
-
-      return (
-        <figure className="my-12">
-          <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-gray-100">
-            <ImageZoom
-              src={imageUrl}
-              alt={alt}
-              className="w-full h-full"
-              imageClassName="object-cover"
-            />
-          </div>
-          {caption && (
-            <figcaption className={`mt-4 text-center text-sm md:text-base text-gray-500 font-medium tracking-tight ${plusJakarta.className}`}>
-              {caption}
-            </figcaption>
-          )}
-        </figure>
-      );
-    },
+    image: ({ value }) => <ProjectImage value={value} />,
     // Video embed type
     videoEmbed: ({ value }) => {
       // Ensure we have a URL

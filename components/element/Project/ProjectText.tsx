@@ -216,7 +216,7 @@ const components: PortableTextComponents = {
             />
           </div>
           {caption && (
-            <figcaption className={`mt-4 text-center text-sm md:text-base text-gray-500 font-medium tracking-tight ${plusJakarta.className}`}>
+            <figcaption className={` text-center text-sm md:text-base text-gray-500 font-medium tracking-tight ${plusJakarta.className}`}>
               {caption}
             </figcaption>
           )}
@@ -230,7 +230,7 @@ const components: PortableTextComponents = {
       const caption = value.caption;
 
       return (
-        <figure className="my-12">
+        <figure className="mb-12">
           <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-gray-100 border border-gray-100">
             <video
               src={value.url}

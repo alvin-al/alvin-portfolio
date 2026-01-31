@@ -113,6 +113,10 @@ export const projectType = defineType({
             },
           ],
         },
+        // Video file upload support
+        {
+          type: 'videoFile',
+        },
         // Video embed support
         {
           type: 'object',

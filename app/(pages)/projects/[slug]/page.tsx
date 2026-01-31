@@ -60,6 +60,8 @@ const ProjectDetailPage = ({ params }: { params: Promise<{ slug: string }> }) =>
           websiteLink={project.websiteLink}
           imageUrl={imageUrl}
           imageAlt={project.mainImage?.alt || project.title}
+          width={project.mainImage?.asset?.metadata?.dimensions?.width}
+          height={project.mainImage?.asset?.metadata?.dimensions?.height}
         />
         {/* ProjectMainImage is now inside ProjectHead */}
         <Entrance delay={0.6}>

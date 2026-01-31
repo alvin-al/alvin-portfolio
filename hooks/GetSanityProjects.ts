@@ -51,6 +51,25 @@ export default function GetSanityProjects() {
             titleDescription: project.titleDescription,
           };
         });
+        const desiredOrder = ["flaat studio", "vyan abimanyu", "erp system internal"];
+        
+        mappedProjects.sort((a, b) => {
+          const aTitle = a.title.toLowerCase();
+          const bTitle = b.title.toLowerCase();
+          
+          const indexA = desiredOrder.findIndex(order => aTitle.includes(order));
+          const indexB = desiredOrder.findIndex(order => bTitle.includes(order));
+          
+          if (indexA !== -1 && indexB !== -1) {
+            return indexA - indexB;
+          }
+          
+          if (indexA !== -1) return -1;
+          if (indexB !== -1) return 1;
+          
+          return 0;
+        });
+
         setProjects(mappedProjects);
         setLoading(false);
       })

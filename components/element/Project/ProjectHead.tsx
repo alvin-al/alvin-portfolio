@@ -22,9 +22,11 @@ interface ProjectHeadProps {
   websiteLink?: string; 
   imageUrl?: string;
   imageAlt?: string;
+  width?: number;
+  height?: number;
 }
 
-const ProjectHead = ({ title, description, date, techStack, websiteLink, imageUrl, imageAlt }: ProjectHeadProps) => {
+const ProjectHead = ({ title, description, date, techStack, websiteLink, imageUrl, imageAlt, width, height }: ProjectHeadProps) => {
   return (
     <div className='flex flex-col mt-0 lg:mt-4'>
       {/* Title Section */}
@@ -37,7 +39,14 @@ const ProjectHead = ({ title, description, date, techStack, websiteLink, imageUr
        {/* Main Image */}
        {imageUrl && (
           <div className="mb-6 lg:mb-8">
-            <ProjectMainImage src={imageUrl} title={imageAlt || title} />
+            <ProjectMainImage 
+              src={imageUrl} 
+              title={imageAlt || title} 
+              className="md:h-[85vh] w-full" 
+              delay={2}
+              width={width}
+              height={height}
+            />
           </div>
        )}
 

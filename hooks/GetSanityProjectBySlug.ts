@@ -39,12 +39,23 @@ export default function GetSanityProjectBySlug(slug: string) {
       titleDescription,
       slug,
       mainImage {
-        asset,
+        asset->{
+          ...,
+          metadata {
+            dimensions
+          }
+        },
         alt
       },
       websiteLink,
       "techStack": technologies,
-      "content": description,
+      "content": description[]{
+        ...,
+        _type == "videoFile" => {
+          ...,
+          "url": asset->url
+        }
+      },
       date
     }`;
 

@@ -9,7 +9,7 @@ const contactList = [
     icon: <BiLogoTelegram size='1.5em' />,
   },
   {
-    href: "https://github.com/alvin-al",
+    href: "https://github.com/alvinxal",
     icon: <FaGithub size='1.5em' />,
   },
   {

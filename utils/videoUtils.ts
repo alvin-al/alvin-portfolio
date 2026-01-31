@@ -6,9 +6,9 @@
  * - https://www.youtube.com/embed/VIDEO_ID
  */
 export function getYouTubeId(url: string): string | null {
-  const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
+  const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?)|(shorts\/))\??v?=?([^#&?]*).*/;
   const match = url.match(regExp);
-  return match && match[7].length === 11 ? match[7] : null;
+  return match && match[8] ? match[8] : null;
 }
 
 /**
@@ -30,7 +30,7 @@ export function getVideoEmbedUrl(url: string): { embedUrl: string; platform: 'yo
   const youtubeId = getYouTubeId(url);
   if (youtubeId) {
     return {
-      embedUrl: `https://www.youtube.com/embed/${youtubeId}`,
+      embedUrl: `https://www.youtube.com/embed/${youtubeId}?controls=0&rel=0`,
       platform: 'youtube',
     };
   }
@@ -38,7 +38,7 @@ export function getVideoEmbedUrl(url: string): { embedUrl: string; platform: 'yo
   const vimeoId = getVimeoId(url);
   if (vimeoId) {
     return {
-      embedUrl: `https://player.vimeo.com/video/${vimeoId}`,
+      embedUrl: `https://player.vimeo.com/video/${vimeoId}?controls=0`,
       platform: 'vimeo',
     };
   }

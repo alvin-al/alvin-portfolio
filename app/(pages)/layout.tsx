@@ -13,13 +13,13 @@ export default function PagesLayout({ children }: { children: React.ReactNode })
   return (
     <LenisProvider>
       <LoadingProvider>
-        <PreloaderWrapper>
-          {/* <PageTransition> */}
-            <Navigation />
-            {children}
-            {!pathname.startsWith("/dashboard") && <HomeFooter />}
-          {/* </PageTransition> */}
-        </PreloaderWrapper>
+      {/* <PreloaderWrapper> */}
+        {/* <PageTransition> */}
+          <Navigation />
+          {children}
+          {!pathname.startsWith("/dashboard") && <HomeFooter />}
+        {/* </PageTransition> */}
+      {/* </PreloaderWrapper> */}
       </LoadingProvider>
     </LenisProvider>
   );

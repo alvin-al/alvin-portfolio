@@ -5,6 +5,7 @@ import { Syne, Plus_Jakarta_Sans } from "next/font/google"; // Import both fonts
 import SplitTextUp from "@/components/ui/SplitTextUp"; // Import Animation
 import { motion } from "motion/react";
 import ProjectMainImage from "./ProjectMainImage";
+import Entrance from "@/components/ui/Entrance";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -51,13 +52,8 @@ const ProjectHead = ({ title, description, date, techStack, websiteLink, imageUr
        )}
 
       {/* Metadata Grid */}
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.5, duration: 0.8 }}
-        className='grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-4 pt-0'
-      >
+      <Entrance delay={2.5}>
+        <div className='grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-4 pt-0'>
         {/* Description */}
         <div className="col-span-1 md:col-span-1 order-1 pt-0">
            <p className={`text-lg md:text-xl font-medium text-gray-900 leading-relaxed ${plusJakarta.className}`}>
@@ -106,7 +102,8 @@ const ProjectHead = ({ title, description, date, techStack, websiteLink, imageUr
             </a>
           </div>
         )}
-      </motion.div>
+      </div>
+      </Entrance>
 
       {/* Divider */}
       <motion.div 

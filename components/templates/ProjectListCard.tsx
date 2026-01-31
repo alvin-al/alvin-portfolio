@@ -22,7 +22,7 @@ function ProjectListCard({ src, title, link, titledesc }: ProjectListCardProps) 
               src={src}
               alt={title}
               fill
-              className='object-contain transition ease-in-out duration-300 rounded-lg shadow-sm'
+              className='object-contain transition ease-in-out duration-300 rounded-lg md:shadow-sm'
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>

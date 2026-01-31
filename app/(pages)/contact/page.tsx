@@ -92,7 +92,7 @@ const ContactPage = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className='px-4 py-3 border border-gray-300 rounded-lg focus:border-gray-900 focus:outline-none transition-colors bg-[#F8F0E5] text-gray-900'
+                    className='px-4 py-3 border border-gray-300 rounded-full focus:border-gray-900 focus:outline-none transition-colors bg-[#F8F0E5] text-gray-900'
                     placeholder='Your name'
                   />
                 </div>
@@ -109,7 +109,7 @@ const ContactPage = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className='px-4 py-3 border border-gray-300 rounded-lg focus:border-gray-900 focus:outline-none transition-colors bg-[#F8F0E5] text-gray-900'
+                    className='px-4 py-3 border border-gray-300 rounded-full focus:border-gray-900 focus:outline-none transition-colors bg-[#F8F0E5] text-gray-900'
                     placeholder='your.email@example.com'
                   />
                 </div>
@@ -126,7 +126,7 @@ const ContactPage = () => {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className='px-4 py-3 border border-gray-300 rounded-lg focus:border-gray-900 focus:outline-none transition-colors bg-[#F8F0E5] text-gray-900 resize-none'
+                    className='px-4 py-3 border border-gray-300 rounded-3xl focus:border-gray-900 focus:outline-none transition-colors bg-[#F8F0E5] text-gray-900 resize-none'
                     placeholder='Tell me about your project or just say hello...'
                   />
                 </div>
@@ -135,7 +135,7 @@ const ContactPage = () => {
                 <button
                   type='submit'
                   disabled={status === 'sending'}
-                  className='mt-4 px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
+                  className='mt-4 px-8 py-4 bg-gray-900 text-white font-semibold rounded-full hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
                 >
                   {status === 'sending' ? 'Sending...' : status === 'success' ? 'Message Sent!' : 'Send Message'}
                 </button>

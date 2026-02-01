@@ -27,7 +27,7 @@ export default function Work() {
         })}
       </div>
       
-      <div className="flex justify-center lg:justify-end pt-12 pb-20">
+      <div className="flex justify-center lg:justify-center pb-20">
         <Link href="/projects">
           <RoundedButton>View All Projects</RoundedButton>
         </Link>

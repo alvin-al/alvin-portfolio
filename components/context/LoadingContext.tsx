@@ -19,12 +19,12 @@ export const LoadingProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    const hasVisited = sessionStorage.getItem("visited");
-    setIsLoading(!hasVisited);
-  }, []);
+  // useEffect(() => {
+  //   const hasVisited = sessionStorage.getItem("visited");
+  //   setIsLoading(!hasVisited);
+  // }, []);
 
   return (
     <LoadingContext.Provider value={{ isLoading, setIsLoading }}>

@@ -24,7 +24,7 @@ export default function Entrance({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: duration, delay: delay, ease: "easeOut" }}
-      className={className}
+      className={`${className} opacity-0`}
       style={{ display: 'block', width: '100%' }}
     >
       {children}

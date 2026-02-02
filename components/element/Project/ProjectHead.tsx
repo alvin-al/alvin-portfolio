@@ -52,7 +52,7 @@ const ProjectHead = ({ title, description, date, techStack, websiteLink, imageUr
        )}
 
       {/* Metadata Grid */}
-      <Entrance delay={2.5}>
+      <Entrance viewportMargin="0px 0px -20% 0px">
         <div className='grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-4 pt-0'>
         {/* Description */}
         <div className="col-span-1 md:col-span-1 order-1 pt-0">

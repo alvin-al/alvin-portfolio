@@ -64,11 +64,12 @@ const ProjectDetailPage = ({ params }: { params: Promise<{ slug: string }> }) =>
           height={project.mainImage?.asset?.metadata?.dimensions?.height}
         />
         {/* ProjectMainImage is now inside ProjectHead */}
-        <Entrance delay={0.6}>
+        {/* ProjectMainImage is now inside ProjectHead */}
+        <Entrance viewportMargin="0px 0px -20% 0px">
           <ProjectText content={project.content} />
         </Entrance>
         
-        <Entrance delay={0.2}>
+        <Entrance>
           <RelatedProjects projects={relatedProjects} />
         </Entrance>
       </div>

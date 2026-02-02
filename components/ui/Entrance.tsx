@@ -9,6 +9,7 @@ interface EntranceProps {
   duration?: number;
   className?: string;
   yOffset?: number;
+  viewportMargin?: string;
 }
 
 export default function Entrance({
@@ -17,12 +18,13 @@ export default function Entrance({
   duration = 0.5,
   className = "",
   yOffset = 50,
+  viewportMargin = "-50px",
 }: EntranceProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: yOffset }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: viewportMargin }}
       transition={{ duration: duration, delay: delay, ease: "easeOut" }}
       className={`${className} opacity-0`}
       style={{ display: 'block', width: '100%' }}

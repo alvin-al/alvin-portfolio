@@ -47,7 +47,7 @@ const BlogDetail = async ({ params }: BlogDetailProps) => {
       })
     : "";
     
-  const imageUrl = post.mainImage ? urlFor(post.mainImage).width(1200).url() : undefined;
+  const imageUrl = post.mainImage?.asset ? urlFor(post.mainImage).width(1200).url() : undefined;
   const imageAlt = post.mainImage?.alt || post.title;
 
   return (

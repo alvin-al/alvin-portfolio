@@ -1,3 +1,4 @@
+import React from 'react'
 import {defineType, defineArrayMember} from 'sanity'
 import {ImageIcon} from '@sanity/icons'
 
@@ -29,7 +30,11 @@ export const blockContentType = defineType({
         {title: 'H2', value: 'h2'},
         {title: 'H3', value: 'h3'},
         {title: 'H4', value: 'h4'},
-        {title: 'Quote', value: 'blockquote'},
+        {
+          title: 'Quote',
+          value: 'blockquote',
+          component: (props) => <blockquote style={{borderLeft: '3px solid #000', paddingLeft: '1rem', margin: '1rem 0', fontStyle: 'italic'}}>{props.children}</blockquote>
+        },
       ],
       lists: [{title: 'Bullet', value: 'bullet'}],
       // Marks let you mark up inline text in the Portable Text Editor
@@ -71,6 +76,33 @@ export const blockContentType = defineType({
           title: 'Alternative Text',
         }
       ]
+    }),
+    defineArrayMember({
+      type: 'code',
+      options: {
+        language: 'javascript',
+        languageAlternatives: [
+          {title: 'JavaScript', value: 'javascript'},
+          {title: 'TypeScript', value: 'typescript'},
+          {title: 'Python', value: 'python'},
+          {title: 'HTML', value: 'html'},
+          {title: 'CSS', value: 'css'},
+          {title: 'JSON', value: 'json'},
+          {title: 'Bash', value: 'bash'},
+          {title: 'SQL', value: 'sql'},
+          {title: 'Go', value: 'go'},
+          {title: 'Rust', value: 'rust'},
+          {title: 'Java', value: 'java'},
+          {title: 'C#', value: 'csharp'},
+          {title: 'C++', value: 'cpp'},
+          {title: 'PHP', value: 'php'},
+          {title: 'Ruby', value: 'ruby'},
+          {title: 'Swift', value: 'swift'},
+          {title: 'Kotlin', value: 'kotlin'},
+          {title: 'YAML', value: 'yaml'},
+          {title: 'Markdown', value: 'markdown'},
+        ],
+      },
     }),
     defineArrayMember({
       type: 'videoFile',

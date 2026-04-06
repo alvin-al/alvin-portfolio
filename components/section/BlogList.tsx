@@ -31,30 +31,31 @@ export default function BlogList() {
                 key={post.id}
                 className="group flex flex-col h-full"
               >
-                <article className="flex flex-col h-full p-6 rounded-2xl border border-gray-400 hover:border-gray-900 hover:bg-gray-900 transition-all duration-300 ease-out relative overflow-hidden group-hover:shadow-2xl">
+                <article className="flex flex-col h-full p-6 rounded-2xl border border-gray-400 hover:border-gray-900 transition-all duration-300 ease-out relative overflow-hidden group-hover:shadow-2xl">
                   
                   {/* Date Badge */}
                   <div className="mb-4">
-                    <span className="text-xs font-bold tracking-widest uppercase text-gray-500 group-hover:text-gray-400 transition-colors">
+                    <span className="text-xs font-bold tracking-widest uppercase text-gray-500 transition-colors">
                       {formatDate(post.date)}
                     </span>
                   </div>
 
                   {/* Title */}
-                  <h2 className="text-2xl font-bold text-gray-900 mb-4 leading-tight group-hover:text-white transition-colors">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4 leading-tight transition-colors">
                     {post.title}
                   </h2>
 
                   {/* Excerpt */}
-                  <p className="text-base text-gray-600 leading-relaxed mb-8 line-clamp-3 flex-grow group-hover:text-gray-300 transition-colors">
+                  <p className="text-base text-gray-600 leading-relaxed mb-8 line-clamp-3 flex-grow transition-colors">
                     {post.excerpt}
                   </p>
 
                   {/* Read More Action */}
-                  <div className="flex items-center text-sm font-bold text-gray-900 mt-auto group-hover:text-white transition-colors">
+                  <div className="flex items-center text-sm font-bold text-gray-900 mt-auto transition-colors">
                     <span className="relative">
                       Read Article
-                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 group-hover:bg-white transition-all group-hover:w-full duration-300"></span>
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 group-hover:bg-gray-900 transition-all group-hover:w-full duration-300"></span>
+
                     </span>
                     <svg 
                       xmlns="http://www.w3.org/2000/svg" 

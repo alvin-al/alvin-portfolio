@@ -1,13 +1,22 @@
-"use client";
 import React from "react";
 import WorkPictures from "../templates/WorkPictures";
-import GetSanityProjects from "@/hooks/GetSanityProjects";
 import Link from "next/link";
 import RoundedButton from "../element/RoundedButton";
 
-export default function Work() {
-  const projects = GetSanityProjects();
+interface Project {
+  mainImage: string;
+  title: string;
+  slug: string;
+  id: string;
+  websiteLink: string;
+  titleDescription: string;
+}
 
+interface WorkProps {
+  projects: Project[];
+}
+
+export default function Work({ projects }: WorkProps) {
   return (
     <div id='project' className='scroll-mt-16'>
       <h2 className='sr-only'>Projects</h2>
@@ -27,7 +36,7 @@ export default function Work() {
         })}
       </div>
       
-      <div className="flex justify-center lg:justify-center pb-20">
+      <div className="flex justify-center lg:justify-center pb-20 md:pb-32 mt-8 md:mt-0">
         <Link href="/projects">
           <RoundedButton>View All Projects</RoundedButton>
         </Link>

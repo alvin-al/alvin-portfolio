@@ -1,32 +1,32 @@
 import { MetadataRoute } from 'next'
- 
+  
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://alvinxal.my.id' // Ganti dengan domain asli
+  const baseUrl = 'https://alvinxal.my.id'
   
   return [
     {
       url: baseUrl,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: `${baseUrl}/#about`,
+      url: `${baseUrl}/projects`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
-      url: `${baseUrl}/#project`,
+      url: `${baseUrl}/blog`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
     {
-      url: `${baseUrl}/#contact`,
+      url: `${baseUrl}/contact`,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.5,
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
   ]
 }

@@ -1,11 +1,19 @@
-"use client";
 import Link from "next/link";
 import React from "react";
-import GetSanityBlogPosts from "@/hooks/GetSanityBlogPosts";
 
-export default function BlogList() {
-  const blogPosts = GetSanityBlogPosts();
+interface BlogPost {
+  title: string;
+  slug: string;
+  date: string;
+  excerpt: string;
+  id: string;
+}
 
+interface BlogListProps {
+  blogPosts: BlogPost[];
+}
+
+export default function BlogList({ blogPosts }: BlogListProps) {
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString("en-US", {
@@ -33,24 +41,20 @@ export default function BlogList() {
               >
                 <article className="flex flex-col h-full p-6 rounded-2xl border border-gray-400 hover:border-gray-900 transition-all duration-300 ease-out relative overflow-hidden group-hover:shadow-2xl">
                   
-                  {/* Date Badge */}
                   <div className="mb-4">
                     <span className="text-xs font-bold tracking-widest uppercase text-gray-500 transition-colors">
                       {formatDate(post.date)}
                     </span>
                   </div>
 
-                  {/* Title */}
                   <h2 className="text-2xl font-bold text-gray-900 mb-4 leading-tight transition-colors">
                     {post.title}
                   </h2>
 
-                  {/* Excerpt */}
                   <p className="text-base text-gray-600 leading-relaxed mb-8 line-clamp-3 flex-grow transition-colors">
                     {post.excerpt}
                   </p>
 
-                  {/* Read More Action */}
                   <div className="flex items-center text-sm font-bold text-gray-900 mt-auto transition-colors">
                     <span className="relative">
                       Read Article
